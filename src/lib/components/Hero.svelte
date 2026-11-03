@@ -133,8 +133,8 @@
 		z-index: 1;
 		right: max(1.25rem, calc((100% - 1120px) / 2));
 		bottom: 3.5rem;
-		width: min(38vw, 480px, calc((100vh - var(--nav-h) - 6rem) * 0.8));
-		aspect-ratio: 4 / 5;
+		width: min(34vw, 440px, calc((100vh - var(--nav-h) - 6rem) * 0.646));
+		aspect-ratio: 900 / 1392;
 		pointer-events: none;
 		will-change: transform;
 	}
@@ -191,7 +191,7 @@
 			right: 50%;
 			bottom: auto;
 			top: 1.5rem;
-			width: min(80vw, 420px);
+			width: min(65vw, 340px);
 			translate: 50% 0;
 			opacity: 0.35;
 		}

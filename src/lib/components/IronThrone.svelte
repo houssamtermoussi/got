@@ -1,15 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 
-	type Sword = {
-		blade: string;
-		guard: string;
-		grip: string;
-		origin: string;
-	};
-
-	const PIVOT_X = 200;
-	const PIVOT_Y = 340;
+	const SRC = '/images/iron-throne.webp';
 
 	const round = (n: number) => Math.round(n * 10) / 10;
 
@@ -18,104 +10,22 @@
 		return x - Math.floor(x);
 	}
 
-	function shape(points: [number, number][], angle: number, ox: number, oy: number) {
-		const a = (angle * Math.PI) / 180;
-		const c = Math.cos(a);
-		const s = Math.sin(a);
-		return (
-			'M' +
-			points.map(([x, y]) => `${round(ox + x * c - y * s)},${round(oy + x * s + y * c)}`).join(' L') +
-			' Z'
-		);
-	}
-
-	function sword(angle: number, len: number, w: number, offset: number, px: number, py: number): Sword {
-		const a = (angle * Math.PI) / 180;
-		const ox = px + offset * Math.sin(a);
-		const oy = py - offset * Math.cos(a);
-		return {
-			blade: shape(
-				[
-					[-w, 0],
-					[-w, -(len - w * 4)],
-					[0, -len],
-					[w, -(len - w * 4)],
-					[w, 0]
-				],
-				angle,
-				ox,
-				oy
-			),
-			guard: shape(
-				[
-					[-w * 3, 0],
-					[w * 3, 0],
-					[w * 3, 5],
-					[-w * 3, 5]
-				],
-				angle,
-				ox,
-				oy
-			),
-			grip: shape(
-				[
-					[-w * 0.6, 5],
-					[w * 0.6, 5],
-					[w * 0.6, 18],
-					[-w * 0.6, 18]
-				],
-				angle,
-				ox,
-				oy
-			),
-			origin: `${round(ox)} ${round(oy)}`
-		};
-	}
-
-	const backSwords = Array.from({ length: 27 }, (_, i) => {
-		const angle = -64 + (128 * i) / 26 + (rand(i + 1) - 0.5) * 4;
-		const len = 120 + 140 * Math.cos((angle * Math.PI * 1.1) / 180) + (rand(i + 50) - 0.5) * 40;
-		return sword(angle, len, 5, 40, PIVOT_X, PIVOT_Y);
-	});
-
-	const midSwords = Array.from({ length: 17 }, (_, i) => {
-		const angle = -50 + (100 * i) / 16 + (rand(i + 100) - 0.5) * 5;
-		const len = 90 + 80 * Math.cos((angle * Math.PI * 1.2) / 180) + (rand(i + 150) - 0.5) * 30;
-		return sword(angle, len, 4.5, 30, PIVOT_X, PIVOT_Y);
-	});
-
-	const armSwords = Array.from({ length: 5 }, (_, i) => {
-		const len = 72 + rand(i + 200) * 18;
-		const y = 318 + i * 6;
-		return [
-			sword(-94 + (i - 2) * 7, len, 4, 0, 150, y),
-			sword(94 - (i - 2) * 7, len, 4, 0, 250, y)
-		];
-	}).flat();
-
-	const hangingSwords = Array.from({ length: 7 }, (_, i) =>
-		sword(180 + (i - 3) * 3, 38 + rand(i + 300) * 14, 3.5, 0, 146 + i * 18, 368)
-	);
-
-	const allSwords = [...backSwords, ...midSwords, ...armSwords, ...hangingSwords];
-
-	const embers = Array.from({ length: 16 }, (_, i) => ({
-		cx: round(110 + rand(i + 400) * 180),
-		cy: round(430 + rand(i + 450) * 30),
-		r: round(1 + rand(i + 500) * 1.6),
-		dx: round((rand(i + 550) - 0.5) * 80),
-		delay: round(rand(i + 600) * 7),
-		duration: round(5 + rand(i + 650) * 4)
+	const embers = Array.from({ length: 22 }, (_, i) => ({
+		left: round(8 + rand(i + 400) * 84),
+		bottom: round(rand(i + 450) * 14),
+		size: round(2 + rand(i + 500) * 3.5),
+		dx: round((rand(i + 550) - 0.5) * 120),
+		delay: round(rand(i + 600) * 8),
+		duration: round(5 + rand(i + 650) * 5)
 	}));
 
 	let tiltEl: HTMLElement | undefined = $state();
-	let svgEl: SVGSVGElement | undefined = $state();
-	let animated = $state(false);
+	let imgWrap: HTMLElement | undefined = $state();
 
 	onMount(() => {
 		const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-		if (reduced || !tiltEl || !svgEl) return;
-		animated = true;
+		if (reduced || !tiltEl || !imgWrap) return;
+		const [tilt, wrap] = [tiltEl, imgWrap];
 
 		let reverted = false;
 		let ctx: { revert: () => void } | undefined;
@@ -123,37 +33,23 @@
 
 		void (async () => {
 			const gsap = (await import('gsap')).default;
-			if (reverted || !tiltEl || !svgEl) return;
+			if (reverted) return;
 
 			ctx = gsap.context(() => {
-				const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
-
-				tl.from(svgEl!.querySelectorAll('.body'), {
-					y: 40,
+				gsap.from(wrap, {
+					y: 80,
+					scale: 0.92,
 					opacity: 0,
-					duration: 1,
-					stagger: 0.08
+					filter: 'blur(12px) brightness(0.2)',
+					duration: 1.8,
+					ease: 'power3.out'
 				});
 
-				svgEl!.querySelectorAll<SVGGElement>('.sword').forEach((el, i) => {
-					tl.from(
-						el,
-						{
-							scale: 0,
-							opacity: 0,
-							duration: 0.9,
-							ease: 'back.out(1.7)',
-							svgOrigin: el.dataset.origin
-						},
-						0.3 + i * 0.022
-					);
-				});
-
-				const rotY = gsap.quickTo(tiltEl!, 'rotationY', { duration: 0.9, ease: 'power3' });
-				const rotX = gsap.quickTo(tiltEl!, 'rotationX', { duration: 0.9, ease: 'power3' });
+				const rotY = gsap.quickTo(tilt, 'rotationY', { duration: 0.9, ease: 'power3' });
+				const rotX = gsap.quickTo(tilt, 'rotationX', { duration: 0.9, ease: 'power3' });
 				onMove = (e: PointerEvent) => {
-					rotY((e.clientX / window.innerWidth - 0.5) * 18);
-					rotX(-(e.clientY / window.innerHeight - 0.5) * 10);
+					rotY((e.clientX / window.innerWidth - 0.5) * 16);
+					rotX(-(e.clientY / window.innerHeight - 0.5) * 8);
 				};
 				window.addEventListener('pointermove', onMove);
 			});
@@ -168,143 +64,44 @@
 </script>
 
 <div class="stage" aria-hidden="true">
+	<div class="glow"></div>
 	<div class="tilt" bind:this={tiltEl}>
 		<div class="float">
-			<svg viewBox="0 0 400 500" bind:this={svgEl}>
-				<defs>
-					<radialGradient id="throne-glow" cx="50%" cy="55%" r="50%">
-						<stop offset="0%" stop-color="#b42828" stop-opacity="0.55" />
-						<stop offset="45%" stop-color="#c9a227" stop-opacity="0.14" />
-						<stop offset="100%" stop-color="#c9a227" stop-opacity="0" />
-					</radialGradient>
-					<linearGradient id="throne-steel" x1="0" y1="0" x2="1" y2="0">
-						<stop offset="0%" stop-color="#3a3631" />
-						<stop offset="50%" stop-color="#b9b2a5" />
-						<stop offset="100%" stop-color="#2e2a26" />
-					</linearGradient>
-					<linearGradient id="throne-steel-dark" x1="0" y1="0" x2="1" y2="0">
-						<stop offset="0%" stop-color="#25221e" />
-						<stop offset="50%" stop-color="#7c766c" />
-						<stop offset="100%" stop-color="#1d1a17" />
-					</linearGradient>
-					<linearGradient id="throne-iron" x1="0" y1="0" x2="1" y2="1">
-						<stop offset="0%" stop-color="#1c1916" />
-						<stop offset="45%" stop-color="#4f4942" />
-						<stop offset="100%" stop-color="#14120f" />
-					</linearGradient>
-					<linearGradient id="throne-stone" x1="0" y1="0" x2="0" y2="1">
-						<stop offset="0%" stop-color="#3a342d" />
-						<stop offset="100%" stop-color="#16130f" />
-					</linearGradient>
-					<linearGradient
-						id="throne-sheen"
-						gradientUnits="userSpaceOnUse"
-						x1="0"
-						y1="0"
-						x2="400"
-						y2="220"
-					>
-						<stop offset="0%" stop-color="#fff" stop-opacity="0" />
-						<stop offset="44%" stop-color="#fff" stop-opacity="0" />
-						<stop offset="50%" stop-color="#fff3c4" stop-opacity="0.75" />
-						<stop offset="56%" stop-color="#fff" stop-opacity="0" />
-						<stop offset="100%" stop-color="#fff" stop-opacity="0" />
-						{#if animated}
-							<animateTransform
-								attributeName="gradientTransform"
-								type="translate"
-								values="-500 0; 500 0; 500 0"
-								keyTimes="0; 0.55; 1"
-								dur="6s"
-								repeatCount="indefinite"
-							/>
-						{/if}
-					</linearGradient>
-				</defs>
-
-				<ellipse class="glow" cx="200" cy="270" rx="200" ry="230" fill="url(#throne-glow)" />
-
-				{#each backSwords as s}
-					<g class="sword" data-origin={s.origin}>
-						<path d={s.blade} fill="url(#throne-steel-dark)" />
-						<path d={s.blade} fill="url(#throne-sheen)" />
-						<path d={s.guard} fill="#3b362f" />
-						<path d={s.grip} fill="#1a1714" />
-					</g>
-				{/each}
-
-				{#each midSwords as s}
-					<g class="sword" data-origin={s.origin}>
-						<path d={s.blade} fill="url(#throne-steel)" />
-						<path d={s.blade} fill="url(#throne-sheen)" />
-						<path d={s.guard} fill="#4a443b" />
-						<path d={s.grip} fill="#1f1b17" />
-					</g>
-				{/each}
-
-				<g class="body">
-					<path d="M150,348 L156,222 Q200,168 244,222 L250,348 Z" fill="url(#throne-iron)" />
-					{#each [168, 184, 200, 216, 232] as x}
-						<line x1={x} y1="344" x2={x} y2={x === 200 ? 200 : 214} stroke="#0d0b09" stroke-opacity="0.7" stroke-width="2" />
-					{/each}
-					<path d="M156,222 Q200,168 244,222" fill="none" stroke="#8a7020" stroke-opacity="0.5" stroke-width="1.5" />
-				</g>
-
-				<g class="body">
-					<path d="M136,366 L264,366 L274,424 L126,424 Z" fill="url(#throne-iron)" />
-				</g>
-
-				{#each hangingSwords as s}
-					<g class="sword" data-origin={s.origin}>
-						<path d={s.blade} fill="url(#throne-steel)" />
-						<path d={s.blade} fill="url(#throne-sheen)" />
-						<path d={s.guard} fill="#4a443b" />
-					</g>
-				{/each}
-
-				<g class="body">
-					<path d="M130,344 L270,344 L278,368 L122,368 Z" fill="#3a352f" />
-					<path d="M130,344 L270,344" stroke="#c9a227" stroke-opacity="0.35" stroke-width="1.5" />
-				</g>
-
-				{#each armSwords as s}
-					<g class="sword" data-origin={s.origin}>
-						<path d={s.blade} fill="url(#throne-steel)" />
-						<path d={s.blade} fill="url(#throne-sheen)" />
-						<path d={s.guard} fill="#4a443b" />
-						<path d={s.grip} fill="#1f1b17" />
-					</g>
-				{/each}
-
-				<g class="body">
-					<rect x="92" y="424" width="216" height="18" fill="url(#throne-stone)" />
-					<rect x="66" y="442" width="268" height="18" fill="url(#throne-stone)" />
-					<rect x="40" y="460" width="320" height="22" fill="url(#throne-stone)" />
-					<path d="M92,424 h216 M66,442 h268 M40,460 h320" stroke="#c9a227" stroke-opacity="0.18" />
-				</g>
-
-				{#each embers as e}
-					<circle
-						class="ember"
-						cx={e.cx}
-						cy={e.cy}
-						r={e.r}
-						style="--dx: {e.dx}px; animation-delay: {e.delay}s; animation-duration: {e.duration}s"
-					/>
-				{/each}
-			</svg>
+			<div class="image" bind:this={imgWrap} style="--src: url({SRC})">
+				<img src={SRC} alt="" width="900" height="1392" decoding="async" />
+				<div class="sheen"></div>
+			</div>
 		</div>
+	</div>
+	<div class="embers">
+		{#each embers as e}
+			<span
+				style="left: {e.left}%; bottom: {e.bottom}%; width: {e.size}px; height: {e.size}px; --dx: {e.dx}px; animation-delay: {e.delay}s; animation-duration: {e.duration}s"
+			></span>
+		{/each}
 	</div>
 </div>
 
 <style>
 	.stage {
+		position: relative;
 		width: 100%;
 		height: 100%;
-		perspective: 900px;
+		perspective: 1000px;
+	}
+
+	.glow {
+		position: absolute;
+		inset: -10% -25% 0;
+		background:
+			radial-gradient(ellipse 45% 40% at 50% 60%, rgba(180, 40, 40, 0.5), transparent 70%),
+			radial-gradient(ellipse 60% 55% at 50% 55%, rgba(201, 162, 39, 0.16), transparent 70%);
+		filter: blur(10px);
+		animation: pulse 4.5s ease-in-out infinite;
 	}
 
 	.tilt {
+		position: relative;
 		width: 100%;
 		height: 100%;
 		transform-style: preserve-3d;
@@ -317,26 +114,55 @@
 		animation: float 7s ease-in-out infinite;
 	}
 
-	svg {
+	.image {
+		position: relative;
 		width: 100%;
 		height: 100%;
-		overflow: visible;
-		filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.7));
+		animation: firelight 3.2s ease-in-out infinite;
 	}
 
-	.glow {
-		transform-box: fill-box;
-		transform-origin: center;
-		animation: pulse 4.5s ease-in-out infinite;
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+		filter: drop-shadow(0 25px 45px rgba(0, 0, 0, 0.85))
+			drop-shadow(0 0 30px rgba(180, 40, 40, 0.25));
 	}
 
-	.ember {
-		fill: #ffb347;
+	.sheen {
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(
+			115deg,
+			transparent 40%,
+			rgba(255, 236, 180, 0.55) 50%,
+			transparent 60%
+		);
+		background-size: 300% 100%;
+		background-repeat: no-repeat;
+		mask: var(--src) center / contain no-repeat;
+		-webkit-mask: var(--src) center / contain no-repeat;
+		mix-blend-mode: overlay;
+		animation: sheen 6s ease-in-out infinite;
+	}
+
+	.embers {
+		position: absolute;
+		inset: 0;
+		pointer-events: none;
+	}
+
+	.embers span {
+		position: absolute;
+		border-radius: 50%;
+		background: #ffb347;
+		box-shadow:
+			0 0 6px 2px rgba(255, 122, 26, 0.8),
+			0 0 14px rgba(255, 80, 20, 0.5);
 		opacity: 0;
 		animation-name: rise;
 		animation-timing-function: linear;
 		animation-iteration-count: infinite;
-		filter: drop-shadow(0 0 3px #ff7a1a);
 	}
 
 	@keyframes float {
@@ -345,19 +171,42 @@
 			transform: translateY(0);
 		}
 		50% {
-			transform: translateY(-14px);
+			transform: translateY(-16px);
 		}
 	}
 
 	@keyframes pulse {
 		0%,
 		100% {
-			opacity: 0.75;
+			opacity: 0.7;
 			transform: scale(1);
 		}
 		50% {
 			opacity: 1;
 			transform: scale(1.06);
+		}
+	}
+
+	@keyframes firelight {
+		0%,
+		100% {
+			filter: brightness(0.95) sepia(0.05);
+		}
+		30% {
+			filter: brightness(1.08) sepia(0.15);
+		}
+		60% {
+			filter: brightness(0.98) sepia(0.08);
+		}
+	}
+
+	@keyframes sheen {
+		0% {
+			background-position: 120% 0;
+		}
+		60%,
+		100% {
+			background-position: -20% 0;
 		}
 	}
 
@@ -371,7 +220,7 @@
 		}
 		100% {
 			opacity: 0;
-			transform: translate(var(--dx), -340px);
+			transform: translate(var(--dx), -55vh);
 		}
 	}
 </style>
