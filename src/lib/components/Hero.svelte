@@ -1,15 +1,18 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { t } from '#lib/i18n/store';
+	import IronThrone from './IronThrone.svelte';
 
 	let root: HTMLElement | undefined = $state();
 	let layerBg: HTMLElement | undefined = $state();
 	let layerFog: HTMLElement | undefined = $state();
+	let layerThrone: HTMLElement | undefined = $state();
 	let layerContent: HTMLElement | undefined = $state();
 
 	onMount(() => {
 		const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-		if (reduced || !root || !layerBg || !layerFog || !layerContent) return;
+		if (reduced || !root || !layerBg || !layerFog || !layerThrone || !layerContent) return;
+		const [hero, bg, fog, throne, content] = [root, layerBg, layerFog, layerThrone, layerContent];
 
 		let reverted = false;
 		let ctx: { revert: () => void } | undefined;
@@ -21,39 +24,49 @@
 			gsap.registerPlugin(ScrollTrigger);
 
 			ctx = gsap.context(() => {
-				gsap.to(layerBg, {
+				gsap.to(bg, {
 					y: 140,
 					scale: 1.12,
 					ease: 'none',
 					scrollTrigger: {
-						trigger: root,
+						trigger: hero,
 						start: 'top top',
 						end: 'bottom top',
 						scrub: true
 					}
 				});
-				gsap.to(layerFog, {
+				gsap.to(fog, {
 					y: 80,
 					ease: 'none',
 					scrollTrigger: {
-						trigger: root,
+						trigger: hero,
 						start: 'top top',
 						end: 'bottom top',
 						scrub: true
 					}
 				});
-				gsap.to(layerContent, {
+				gsap.to(throne, {
+					y: 90,
+					ease: 'none',
+					scrollTrigger: {
+						trigger: hero,
+						start: 'top top',
+						end: 'bottom top',
+						scrub: true
+					}
+				});
+				gsap.to(content, {
 					y: 40,
 					opacity: 0.35,
 					ease: 'none',
 					scrollTrigger: {
-						trigger: root,
+						trigger: hero,
 						start: 'top top',
 						end: 'bottom top',
 						scrub: true
 					}
 				});
-			}, root);
+			}, hero);
 		})();
 
 		return () => {
@@ -66,6 +79,9 @@
 <section class="hero" bind:this={root} aria-label={$t('hero.title')}>
 	<div class="layer bg" bind:this={layerBg} aria-hidden="true"></div>
 	<div class="layer fog" bind:this={layerFog} aria-hidden="true"></div>
+	<div class="throne" bind:this={layerThrone}>
+		<IronThrone />
+	</div>
 	<div class="content container" bind:this={layerContent}>
 		<p class="brand">{$t('brand')}</p>
 		<h1>{$t('hero.title')}</h1>
@@ -110,6 +126,17 @@
 		background:
 			linear-gradient(180deg, rgba(11, 10, 9, 0.2), rgba(11, 10, 9, 0.75) 70%, #0b0a09),
 			radial-gradient(ellipse at 50% 80%, rgba(42, 37, 32, 0.7), transparent 60%);
+	}
+
+	.throne {
+		position: absolute;
+		z-index: 1;
+		right: max(1.25rem, calc((100% - 1120px) / 2));
+		bottom: 3.5rem;
+		width: min(38vw, 480px, calc((100vh - var(--nav-h) - 6rem) * 0.8));
+		aspect-ratio: 4 / 5;
+		pointer-events: none;
+		will-change: transform;
 	}
 
 	.content {
@@ -157,6 +184,17 @@
 		height: 6rem;
 		background: linear-gradient(transparent, var(--bg));
 		z-index: 3;
+	}
+
+	@media (max-width: 900px) {
+		.throne {
+			right: 50%;
+			bottom: auto;
+			top: 1.5rem;
+			width: min(80vw, 420px);
+			translate: 50% 0;
+			opacity: 0.35;
+		}
 	}
 
 	@media (max-width: 700px) {
