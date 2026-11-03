@@ -7,7 +7,7 @@
 			"fr": ["Seigneur Commandant", "Roi du Nord"],
 			"en": ["Lord Commander", "King in the North"]
 		},
-		"image": "/images/characters/jon-snow.svg",
+		"image": "/images/characters/jon-snow.jpg",
 		"accent": "#9aa4b2",
 		"bio": {
 			"fr": "Élevé à Winterfell comme bâtard d'Eddard Stark, Jon rejoint la Garde de Nuit. Son destin le mène au-delà du Mur, puis au trône du Nord.",
@@ -22,7 +22,7 @@
 			"fr": ["Reine des Dragons", "Khaleesi", "Briseuse de chaînes"],
 			"en": ["Queen of Dragons", "Khaleesi", "Breaker of Chains"]
 		},
-		"image": "/images/characters/daenerys.svg",
+		"image": "/images/characters/daenerys.jpg",
 		"accent": "#8b1e1e",
 		"bio": {
 			"fr": "Dernière héritière connue de la maison Targaryen, Daenerys naît en exil. Elle éclos ses dragons et traverse Essos pour reconquérir le Trône de Fer.",
@@ -37,7 +37,7 @@
 			"fr": ["Main du Roi", "Seigneur de Casterly Rock"],
 			"en": ["Hand of the King", "Lord of Casterly Rock"]
 		},
-		"image": "/images/characters/tyrion.svg",
+		"image": "/images/characters/tyrion.jpg",
 		"accent": "#c9a227",
 		"bio": {
 			"fr": "Le plus jeune des Lannister, Tyrion survit par l'esprit et le cynisme. Conseiller redoutable, il devient une pièce maîtresse du grand jeu.",
@@ -52,7 +52,7 @@
 			"fr": ["Sans-Visage", "Princesse du Nord"],
 			"en": ["Faceless Man", "Princess of the North"]
 		},
-		"image": "/images/characters/arya.svg",
+		"image": "/images/characters/arya.jpg",
 		"accent": "#9aa4b2",
 		"bio": {
 			"fr": "Cadette rebelle des Stark, Arya fuit King's Landing et apprend l'art de tuer à Braavos. Sa liste de vengeance guide chacun de ses pas.",
@@ -67,7 +67,7 @@
 			"fr": ["Dame de Winterfell", "Reine du Nord"],
 			"en": ["Lady of Winterfell", "Queen in the North"]
 		},
-		"image": "/images/characters/sansa.svg",
+		"image": "/images/characters/sansa.jpg",
 		"accent": "#9aa4b2",
 		"bio": {
 			"fr": "Aînée des filles Stark, Sansa apprend la politique à la dure à la cour. De proie naïve, elle devient une souveraine du Nord.",
@@ -82,7 +82,7 @@
 			"fr": ["Reine Régente", "Reine des Sept Royaumes"],
 			"en": ["Queen Regent", "Queen of the Seven Kingdoms"]
 		},
-		"image": "/images/characters/cersei.svg",
+		"image": "/images/characters/cersei.jpg",
 		"accent": "#c9a227",
 		"bio": {
 			"fr": "Reine puis régente, Cersei protège sa lignée par tous les moyens. Ambitieuse et impitoyable, elle incarne la soif de pouvoir des Lannister.",
@@ -97,7 +97,7 @@
 			"fr": ["Chevalier de la Garde Royale", "Régicide"],
 			"en": ["Kingsguard knight", "Kingslayer"]
 		},
-		"image": "/images/characters/jaime.svg",
+		"image": "/images/characters/jaime.jpg",
 		"accent": "#c9a227",
 		"bio": {
 			"fr": "Jumeau de Cersei et membre de la Garde Royale, Jaime porte le poids du régicide. Son chemin le mène vers une rédemption improbable.",
@@ -112,7 +112,7 @@
 			"fr": ["Seigneur de Winterfell", "Main du Roi"],
 			"en": ["Lord of Winterfell", "Hand of the King"]
 		},
-		"image": "/images/characters/ned.svg",
+		"image": "/images/characters/ned.jpg",
 		"accent": "#9aa4b2",
 		"bio": {
 			"fr": "Seigneur d'honneur du Nord, Ned accepte le rôle de Main du Roi. Sa droiture se heurte aux intrigues de King's Landing.",
@@ -127,7 +127,7 @@
 			"fr": ["Corbeau à Trois Yeux", "Roi des Six Royaumes"],
 			"en": ["Three-Eyed Raven", "King of the Six Kingdoms"]
 		},
-		"image": "/images/characters/bran.svg",
+		"image": "/images/characters/bran.jpg",
 		"accent": "#9aa4b2",
 		"bio": {
 			"fr": "Après sa chute, Bran développe des pouvoirs mystiques. Il devient le Corbeau à Trois Yeux, gardien de la mémoire du monde.",
@@ -142,7 +142,7 @@
 			"fr": ["Chevalière", "Dame Commandante de la Garde Royale"],
 			"en": ["Knight", "Lord Commander of the Kingsguard"]
 		},
-		"image": "/images/characters/brienne.svg",
+		"image": "/images/characters/brienne.jpg",
 		"accent": "#5b7fa6",
 		"bio": {
 			"fr": "Guerrière d'une loyauté absolue, Brienne sert Catelyn puis les Stark. Elle incarne le vrai code de la chevalerie.",
@@ -157,7 +157,7 @@
 			"fr": ["Prince des Îles de Fer", "Reek"],
 			"en": ["Prince of the Iron Islands", "Reek"]
 		},
-		"image": "/images/characters/theon.svg",
+		"image": "/images/characters/theon.jpg",
 		"accent": "#4a5568",
 		"bio": {
 			"fr": "Otage des Stark puis traître de Winterfell, Theon subit la cruauté de Ramsay. Son arc est celui de la chute et de la rédemption.",
@@ -172,7 +172,7 @@
 			"fr": ["Frère juré", "Grand Mestre"],
 			"en": ["Sworn brother", "Grand Maester"]
 		},
-		"image": "/images/characters/sam.svg",
+		"image": "/images/characters/sam.jpg",
 		"accent": "#2f7d4a",
 		"bio": {
 			"fr": "Fils rejeté de Randyll Tarly, Sam trouve sa place à la Garde de Nuit. Courage et savoir en font un allié inattendu.",

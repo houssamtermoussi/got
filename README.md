@@ -44,3 +44,7 @@ Sélecteur FR | EN dans la navigation (persisté dans `localStorage`).
 ## Note
 
 Site non officiel, inspiré de l’univers de George R. R. Martin.
+
+## Crédits images
+
+Blasons et portraits issus de [Wikimedia Commons](https://commons.wikimedia.org) (licences Creative Commons BY / BY-SA). Voir les pages des fichiers sur Commons pour auteurs et licences détaillées.
