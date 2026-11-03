@@ -1,0 +1,182 @@
+[
+	{
+		"id": "jon-snow",
+		"name": { "fr": "Jon Snow", "en": "Jon Snow" },
+		"houseId": "stark",
+		"titles": {
+			"fr": ["Seigneur Commandant", "Roi du Nord"],
+			"en": ["Lord Commander", "King in the North"]
+		},
+		"image": "/images/characters/jon-snow.svg",
+		"accent": "#9aa4b2",
+		"bio": {
+			"fr": "Élevé à Winterfell comme bâtard d'Eddard Stark, Jon rejoint la Garde de Nuit. Son destin le mène au-delà du Mur, puis au trône du Nord.",
+			"en": "Raised at Winterfell as Eddard Stark's bastard, Jon joins the Night's Watch. Destiny leads him beyond the Wall, then to the throne of the North."
+		}
+	},
+	{
+		"id": "daenerys",
+		"name": { "fr": "Daenerys Targaryen", "en": "Daenerys Targaryen" },
+		"houseId": "targaryen",
+		"titles": {
+			"fr": ["Reine des Dragons", "Khaleesi", "Briseuse de chaînes"],
+			"en": ["Queen of Dragons", "Khaleesi", "Breaker of Chains"]
+		},
+		"image": "/images/characters/daenerys.svg",
+		"accent": "#8b1e1e",
+		"bio": {
+			"fr": "Dernière héritière connue de la maison Targaryen, Daenerys naît en exil. Elle éclos ses dragons et traverse Essos pour reconquérir le Trône de Fer.",
+			"en": "Last known heir of House Targaryen, Daenerys is born in exile. She hatches dragons and crosses Essos to reclaim the Iron Throne."
+		}
+	},
+	{
+		"id": "tyrion",
+		"name": { "fr": "Tyrion Lannister", "en": "Tyrion Lannister" },
+		"houseId": "lannister",
+		"titles": {
+			"fr": ["Main du Roi", "Seigneur de Casterly Rock"],
+			"en": ["Hand of the King", "Lord of Casterly Rock"]
+		},
+		"image": "/images/characters/tyrion.svg",
+		"accent": "#c9a227",
+		"bio": {
+			"fr": "Le plus jeune des Lannister, Tyrion survit par l'esprit et le cynisme. Conseiller redoutable, il devient une pièce maîtresse du grand jeu.",
+			"en": "Youngest of the Lannisters, Tyrion survives by wit and cynicism. A formidable counselor, he becomes a key piece in the game of thrones."
+		}
+	},
+	{
+		"id": "arya",
+		"name": { "fr": "Arya Stark", "en": "Arya Stark" },
+		"houseId": "stark",
+		"titles": {
+			"fr": ["Sans-Visage", "Princesse du Nord"],
+			"en": ["Faceless Man", "Princess of the North"]
+		},
+		"image": "/images/characters/arya.svg",
+		"accent": "#9aa4b2",
+		"bio": {
+			"fr": "Cadette rebelle des Stark, Arya fuit King's Landing et apprend l'art de tuer à Braavos. Sa liste de vengeance guide chacun de ses pas.",
+			"en": "Rebellious youngest Stark, Arya flees King's Landing and learns the art of killing in Braavos. Her kill list guides every step."
+		}
+	},
+	{
+		"id": "sansa",
+		"name": { "fr": "Sansa Stark", "en": "Sansa Stark" },
+		"houseId": "stark",
+		"titles": {
+			"fr": ["Dame de Winterfell", "Reine du Nord"],
+			"en": ["Lady of Winterfell", "Queen in the North"]
+		},
+		"image": "/images/characters/sansa.svg",
+		"accent": "#9aa4b2",
+		"bio": {
+			"fr": "Aînée des filles Stark, Sansa apprend la politique à la dure à la cour. De proie naïve, elle devient une souveraine du Nord.",
+			"en": "Eldest Stark daughter, Sansa learns politics the hard way at court. From naive prey she becomes a sovereign of the North."
+		}
+	},
+	{
+		"id": "cersei",
+		"name": { "fr": "Cersei Lannister", "en": "Cersei Lannister" },
+		"houseId": "lannister",
+		"titles": {
+			"fr": ["Reine Régente", "Reine des Sept Royaumes"],
+			"en": ["Queen Regent", "Queen of the Seven Kingdoms"]
+		},
+		"image": "/images/characters/cersei.svg",
+		"accent": "#c9a227",
+		"bio": {
+			"fr": "Reine puis régente, Cersei protège sa lignée par tous les moyens. Ambitieuse et impitoyable, elle incarne la soif de pouvoir des Lannister.",
+			"en": "Queen then regent, Cersei protects her bloodline by any means. Ambitious and ruthless, she embodies Lannister hunger for power."
+		}
+	},
+	{
+		"id": "jaime",
+		"name": { "fr": "Jaime Lannister", "en": "Jaime Lannister" },
+		"houseId": "lannister",
+		"titles": {
+			"fr": ["Chevalier de la Garde Royale", "Régicide"],
+			"en": ["Kingsguard knight", "Kingslayer"]
+		},
+		"image": "/images/characters/jaime.svg",
+		"accent": "#c9a227",
+		"bio": {
+			"fr": "Jumeau de Cersei et membre de la Garde Royale, Jaime porte le poids du régicide. Son chemin le mène vers une rédemption improbable.",
+			"en": "Cersei's twin and a Kingsguard knight, Jaime bears the weight of kingslaying. His path leads toward unlikely redemption."
+		}
+	},
+	{
+		"id": "ned",
+		"name": { "fr": "Eddard Stark", "en": "Eddard Stark" },
+		"houseId": "stark",
+		"titles": {
+			"fr": ["Seigneur de Winterfell", "Main du Roi"],
+			"en": ["Lord of Winterfell", "Hand of the King"]
+		},
+		"image": "/images/characters/ned.svg",
+		"accent": "#9aa4b2",
+		"bio": {
+			"fr": "Seigneur d'honneur du Nord, Ned accepte le rôle de Main du Roi. Sa droiture se heurte aux intrigues de King's Landing.",
+			"en": "Honorable lord of the North, Ned accepts the role of Hand of the King. His integrity collides with the intrigues of King's Landing."
+		}
+	},
+	{
+		"id": "bran",
+		"name": { "fr": "Bran Stark", "en": "Bran Stark" },
+		"houseId": "stark",
+		"titles": {
+			"fr": ["Corbeau à Trois Yeux", "Roi des Six Royaumes"],
+			"en": ["Three-Eyed Raven", "King of the Six Kingdoms"]
+		},
+		"image": "/images/characters/bran.svg",
+		"accent": "#9aa4b2",
+		"bio": {
+			"fr": "Après sa chute, Bran développe des pouvoirs mystiques. Il devient le Corbeau à Trois Yeux, gardien de la mémoire du monde.",
+			"en": "After his fall, Bran develops mystical powers. He becomes the Three-Eyed Raven, keeper of the world's memory."
+		}
+	},
+	{
+		"id": "brienne",
+		"name": { "fr": "Brienne de Torth", "en": "Brienne of Tarth" },
+		"houseId": "baratheon",
+		"titles": {
+			"fr": ["Chevalière", "Dame Commandante de la Garde Royale"],
+			"en": ["Knight", "Lord Commander of the Kingsguard"]
+		},
+		"image": "/images/characters/brienne.svg",
+		"accent": "#5b7fa6",
+		"bio": {
+			"fr": "Guerrière d'une loyauté absolue, Brienne sert Catelyn puis les Stark. Elle incarne le vrai code de la chevalerie.",
+			"en": "A warrior of absolute loyalty, Brienne serves Catelyn then the Starks. She embodies the true code of knighthood."
+		}
+	},
+	{
+		"id": "theon",
+		"name": { "fr": "Theon Greyjoy", "en": "Theon Greyjoy" },
+		"houseId": "greyjoy",
+		"titles": {
+			"fr": ["Prince des Îles de Fer", "Reek"],
+			"en": ["Prince of the Iron Islands", "Reek"]
+		},
+		"image": "/images/characters/theon.svg",
+		"accent": "#4a5568",
+		"bio": {
+			"fr": "Otage des Stark puis traître de Winterfell, Theon subit la cruauté de Ramsay. Son arc est celui de la chute et de la rédemption.",
+			"en": "Stark ward then betrayer of Winterfell, Theon suffers Ramsay's cruelty. His arc is one of fall and redemption."
+		}
+	},
+	{
+		"id": "sam",
+		"name": { "fr": "Samwell Tarly", "en": "Samwell Tarly" },
+		"houseId": "tyrell",
+		"titles": {
+			"fr": ["Frère juré", "Grand Mestre"],
+			"en": ["Sworn brother", "Grand Maester"]
+		},
+		"image": "/images/characters/sam.svg",
+		"accent": "#2f7d4a",
+		"bio": {
+			"fr": "Fils rejeté de Randyll Tarly, Sam trouve sa place à la Garde de Nuit. Courage et savoir en font un allié inattendu.",
+			"en": "Rejected son of Randyll Tarly, Sam finds his place in the Night's Watch. Courage and knowledge make him an unexpected ally."
+		}
+	}
+]

@@ -1,0 +1,106 @@
+[
+	{
+		"id": "stark",
+		"name": { "fr": "Maison Stark", "en": "House Stark" },
+		"words": { "fr": "L'hiver vient", "en": "Winter is Coming" },
+		"seat": { "fr": "Winterfell", "en": "Winterfell" },
+		"region": { "fr": "Le Nord", "en": "The North" },
+		"color": "#9aa4b2",
+		"sigil": "/images/houses/stark.svg",
+		"description": {
+			"fr": "Ancienne lignée des Rois du Nord, les Stark règnent depuis Winterfell. Leur loup-garou gris sur champ blanc incarne l'honneur et la dureté du Nord.",
+			"en": "Ancient line of the Kings in the North, the Starks rule from Winterfell. Their grey direwolf on white embodies honor and the harshness of the North."
+		}
+	},
+	{
+		"id": "lannister",
+		"name": { "fr": "Maison Lannister", "en": "House Lannister" },
+		"words": { "fr": "Un Lannister paie toujours ses dettes", "en": "A Lannister Always Pays His Debts" },
+		"seat": { "fr": "Casterly Rock", "en": "Casterly Rock" },
+		"region": { "fr": "Le Westerlands", "en": "The Westerlands" },
+		"color": "#c9a227",
+		"sigil": "/images/houses/lannister.svg",
+		"description": {
+			"fr": "La plus riche des grandes maisons, les Lannister tiennent Casterly Rock et ses mines d'or. Leur lion d'or sur champ cramoisi inspire autant la crainte que le respect.",
+			"en": "Richest of the great houses, the Lannisters hold Casterly Rock and its gold mines. Their golden lion on crimson inspires fear as much as respect."
+		}
+	},
+	{
+		"id": "targaryen",
+		"name": { "fr": "Maison Targaryen", "en": "House Targaryen" },
+		"words": { "fr": "Feu et sang", "en": "Fire and Blood" },
+		"seat": { "fr": "Dragonstone", "en": "Dragonstone" },
+		"region": { "fr": "Îles de la Baie de la Néra", "en": "Blackwater Bay islands" },
+		"color": "#8b1e1e",
+		"sigil": "/images/houses/targaryen.svg",
+		"description": {
+			"fr": "Derniers descendants de Valyria, les Targaryen ont conquis Westeros avec leurs dragons. Leur blason, un dragon à trois têtes, rappelle Feu et Sang.",
+			"en": "Last remnants of Valyria, the Targaryens conquered Westeros with dragons. Their three-headed dragon sigil recalls Fire and Blood."
+		}
+	},
+	{
+		"id": "baratheon",
+		"name": { "fr": "Maison Baratheon", "en": "House Baratheon" },
+		"words": { "fr": "Nôtre est la fureur", "en": "Ours is the Fury" },
+		"seat": { "fr": "Accalmie", "en": "Storm's End" },
+		"region": { "fr": "Les Terres de l'Orage", "en": "The Stormlands" },
+		"color": "#d4a017",
+		"sigil": "/images/houses/baratheon.svg",
+		"description": {
+			"fr": "Née de la conquête de Robert, la maison Baratheon règne depuis Accalmie. Un cerf couronné noir sur or symbolise leur fureur légendaire.",
+			"en": "Born of Robert's Rebellion, House Baratheon rules from Storm's End. A crowned black stag on gold symbolizes their legendary fury."
+		}
+	},
+	{
+		"id": "greyjoy",
+		"name": { "fr": "Maison Greyjoy", "en": "House Greyjoy" },
+		"words": { "fr": "Nous ne semons pas", "en": "We Do Not Sow" },
+		"seat": { "fr": "Pyk", "en": "Pyke" },
+		"region": { "fr": "Les Îles de Fer", "en": "The Iron Islands" },
+		"color": "#4a5568",
+		"sigil": "/images/houses/greyjoy.svg",
+		"description": {
+			"fr": "Seigneurs des Îles de Fer, les Greyjoy vivent du pillage et de la mer. Leur kraken doré sur noir rappelle que les Fer-nés ne sèment pas.",
+			"en": "Lords of the Iron Islands, the Greyjoys live by reaving and the sea. Their golden kraken on black recalls that Ironborn do not sow."
+		}
+	},
+	{
+		"id": "tyrell",
+		"name": { "fr": "Maison Tyrell", "en": "House Tyrell" },
+		"words": { "fr": "Grandir fort", "en": "Growing Strong" },
+		"seat": { "fr": "Hautjardin", "en": "Highgarden" },
+		"region": { "fr": "Le Bief", "en": "The Reach" },
+		"color": "#2f7d4a",
+		"sigil": "/images/houses/tyrell.svg",
+		"description": {
+			"fr": "Gardiens du Bief fertile, les Tyrell de Hautjardin arborent une rose d'or sur vert. Diplomatie et abondance sont leurs armes.",
+			"en": "Wardens of the fertile Reach, the Tyrells of Highgarden bear a golden rose on green. Diplomacy and abundance are their weapons."
+		}
+	},
+	{
+		"id": "martell",
+		"name": { "fr": "Maison Martell", "en": "House Martell" },
+		"words": { "fr": "Impunis, non courbés", "en": "Unbowed, Unbent, Unbroken" },
+		"seat": { "fr": "Lanceheliopolis", "en": "Sunspear" },
+		"region": { "fr": "Dorne", "en": "Dorne" },
+		"color": "#c45c26",
+		"sigil": "/images/houses/martell.svg",
+		"description": {
+			"fr": "Princes de Dorne, les Martell n'ont jamais été vaincus. Soleil et lance rouge sur or : impunis, non courbés, non brisés.",
+			"en": "Princes of Dorne, the Martells were never conquered. A red sun pierced by a spear on gold: unbowed, unbent, unbroken."
+		}
+	},
+	{
+		"id": "arryn",
+		"name": { "fr": "Maison Arryn", "en": "House Arryn" },
+		"words": { "fr": "Aussi haut que l'honneur", "en": "As High as Honor" },
+		"seat": { "fr": "Les Eyrié", "en": "The Eyrie" },
+		"region": { "fr": "Le Val", "en": "The Vale" },
+		"color": "#5b7fa6",
+		"sigil": "/images/houses/arryn.svg",
+		"description": {
+			"fr": "Seigneurs du Val, les Arryn règnent depuis les Eyrié perchées dans les Montagnes de la Lune. Leur faucon céleste incarne l'honneur.",
+			"en": "Lords of the Vale, the Arryns rule from the Eyrie high in the Mountains of the Moon. Their sky-blue falcon embodies honor."
+		}
+	}
+]

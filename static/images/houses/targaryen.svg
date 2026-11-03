@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240" fill="none">
+  <rect width="200" height="240" fill="#1a0808"/>
+  <path d="M100 40 L120 90 L170 85 L130 120 L150 175 L100 145 L50 175 L70 120 L30 85 L80 90 Z" fill="#8b1e1e" opacity=".35"/>
+  <path d="M100 70c-8 20-28 36-28 60 0 18 12 32 28 32s28-14 28-32c0-24-20-40-28-60z" fill="#b42828"/>
+  <path d="M72 95c-20 4-34 22-30 40 4 14 18 22 32 18M128 95c20 4 34 22 30 40-4 14-18 22-32 18" fill="#8b1e1e"/>
+  <circle cx="100" cy="118" r="6" fill="#c9a227"/>
+  <path d="M100 70 L100 50 M85 80 L70 60 M115 80 L130 60" stroke="#c9a227" stroke-width="3" stroke-linecap="round"/>
+</svg>

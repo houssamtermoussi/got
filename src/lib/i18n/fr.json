@@ -1,0 +1,52 @@
+{
+	"brand": "Game of Thrones",
+	"nav": {
+		"home": "Accueil",
+		"characters": "Personnages",
+		"houses": "Maisons",
+		"map": "Carte"
+	},
+	"hero": {
+		"title": "Le Trône de Fer",
+		"subtitle": "Explorez Westeros et Essos — personnages, maisons et territoires du royaume.",
+		"ctaCharacters": "Voir les personnages",
+		"ctaMap": "Explorer la carte"
+	},
+	"home": {
+		"introTitle": "Un monde de glace et de feu",
+		"introText": "Des Neiges éternelles au Désert rouge, des grandes maisons se disputent le pouvoir. Découvrez leurs histoires, leurs blasons et les lieux qui ont façonné le destin des Sept Royaumes.",
+		"featuredCharacters": "Personnages emblématiques",
+		"featuredHouses": "Grandes maisons",
+		"viewAll": "Tout voir"
+	},
+	"characters": {
+		"title": "Personnages",
+		"lead": "Seigneurs, reines, bâtards et protecteurs — ceux qui ont marqué l'histoire.",
+		"house": "Maison",
+		"titles": "Titres",
+		"back": "Retour aux personnages",
+		"relatedHouse": "Maison liée"
+	},
+	"houses": {
+		"title": "Maisons",
+		"lead": "Blasons, devises et sièges des grandes maisons de Westeros.",
+		"words": "Devise",
+		"seat": "Siège",
+		"region": "Région",
+		"members": "Membres connus",
+		"back": "Retour aux maisons"
+	},
+	"map": {
+		"title": "Carte des royaumes",
+		"lead": "Naviguez à travers Westeros et Essos. Cliquez sur un lieu pour en savoir plus.",
+		"filterAll": "Tout",
+		"filterWesteros": "Westeros",
+		"filterEssos": "Essos",
+		"selectHint": "Sélectionnez un lieu sur la carte",
+		"continent": "Continent",
+		"close": "Fermer"
+	},
+	"footer": {
+		"note": "Site fan non officiel — contenu inspiré de l'univers de George R. R. Martin."
+	}
+}

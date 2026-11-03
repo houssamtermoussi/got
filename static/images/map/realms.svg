@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" fill="none">
+  <defs>
+    <linearGradient id="sea" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a1620"/>
+      <stop offset="100%" stop-color="#0d1f2a"/>
+    </linearGradient>
+    <linearGradient id="land" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3a342c"/>
+      <stop offset="100%" stop-color="#2a241c"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="2"/></filter>
+  </defs>
+  <rect width="1000" height="700" fill="url(#sea)"/>
+  <!-- grid subtle -->
+  <g stroke="#c9a227" stroke-opacity=".05" stroke-width="1">
+    <path d="M0 100 H1000 M0 200 H1000 M0 300 H1000 M0 400 H1000 M0 500 H1000 M0 600 H1000"/>
+    <path d="M100 0 V700 M200 0 V700 M300 0 V700 M400 0 V700 M500 0 V700 M600 0 V700 M700 0 V700 M800 0 V700 M900 0 V700"/>
+  </g>
+  <!-- Westeros -->
+  <path fill="url(#land)" stroke="#c9a227" stroke-opacity=".35" stroke-width="1.5"
+    d="M180 40 L260 55 L300 90 L290 140 L310 180 L280 220 L300 280 L270 330 L250 380 L280 430 L310 470 L290 520 L250 560 L220 600 L180 620 L140 580 L120 520 L100 460 L90 400 L70 350 L80 290 L60 240 L90 190 L110 140 L140 90 Z"/>
+  <!-- Neck / river hint -->
+  <path d="M200 300 C220 320 240 340 230 360" stroke="#1a4050" stroke-width="3" fill="none" opacity=".5"/>
+  <!-- Iron Islands -->
+  <ellipse cx="120" cy="290" rx="18" ry="10" fill="#2a241c" stroke="#c9a227" stroke-opacity=".3"/>
+  <ellipse cx="145" cy="300" rx="10" ry="6" fill="#2a241c" stroke="#c9a227" stroke-opacity=".3"/>
+  <!-- Dragonstone -->
+  <ellipse cx="360" cy="380" rx="14" ry="10" fill="#2a241c" stroke="#c9a227" stroke-opacity=".3"/>
+  <!-- Essos -->
+  <path fill="url(#land)" stroke="#c9a227" stroke-opacity=".35" stroke-width="1.5"
+    d="M520 80 L620 70 L720 90 L820 120 L900 180 L940 260 L950 340 L920 420 L880 500 L820 560 L740 600 L660 590 L600 540 L560 470 L540 400 L530 320 L510 240 L500 160 Z"/>
+  <!-- Free Cities coast detail -->
+  <path d="M520 160 C540 200 530 250 545 300 C555 340 540 380 560 420" stroke="#1a4050" stroke-width="2" fill="none" opacity=".4"/>
+  <!-- Labels -->
+  <text x="200" y="250" fill="#c9a227" fill-opacity=".55" font-family="Georgia, serif" font-size="22" letter-spacing="6">WESTEROS</text>
+  <text x="700" y="320" fill="#c9a227" fill-opacity=".55" font-family="Georgia, serif" font-size="22" letter-spacing="6">ESSOS</text>
+  <text x="200" y="680" fill="#9a9080" fill-opacity=".5" font-family="Georgia, serif" font-size="12">Narrow Sea</text>
+</svg>

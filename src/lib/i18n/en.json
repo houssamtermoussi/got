@@ -1,0 +1,52 @@
+{
+	"brand": "Game of Thrones",
+	"nav": {
+		"home": "Home",
+		"characters": "Characters",
+		"houses": "Houses",
+		"map": "Map"
+	},
+	"hero": {
+		"title": "Game of Thrones",
+		"subtitle": "Explore Westeros and Essos — characters, great houses, and the lands of the realm.",
+		"ctaCharacters": "Meet the characters",
+		"ctaMap": "Explore the map"
+	},
+	"home": {
+		"introTitle": "A world of ice and fire",
+		"introText": "From the Lands of Always Winter to the Red Waste, great houses vie for power. Discover their stories, sigils, and the places that shaped the fate of the Seven Kingdoms.",
+		"featuredCharacters": "Iconic characters",
+		"featuredHouses": "Great houses",
+		"viewAll": "View all"
+	},
+	"characters": {
+		"title": "Characters",
+		"lead": "Lords, queens, bastards, and protectors — those who shaped history.",
+		"house": "House",
+		"titles": "Titles",
+		"back": "Back to characters",
+		"relatedHouse": "Related house"
+	},
+	"houses": {
+		"title": "Houses",
+		"lead": "Sigils, words, and seats of the great houses of Westeros.",
+		"words": "Words",
+		"seat": "Seat",
+		"region": "Region",
+		"members": "Known members",
+		"back": "Back to houses"
+	},
+	"map": {
+		"title": "Map of the realms",
+		"lead": "Travel across Westeros and Essos. Click a location to learn more.",
+		"filterAll": "All",
+		"filterWesteros": "Westeros",
+		"filterEssos": "Essos",
+		"selectHint": "Select a place on the map",
+		"continent": "Continent",
+		"close": "Close"
+	},
+	"footer": {
+		"note": "Unofficial fan site — content inspired by the world of George R. R. Martin."
+	}
+}
