@@ -2,13 +2,20 @@
 
 Site frontend fan (SvelteKit) — thème sombre, personnages, maisons, carte interactive de Westeros et Essos, bilingue FR/EN.
 
-## Stack
+## Prérequis
 
-- SvelteKit + TypeScript + adapter-static
-- GSAP (disponible) + parallax / révélations au scroll en CSS
-- Données JSON locales (pas de backend)
+- [Node.js](https://nodejs.org/) (version 18 ou supérieure recommandée)
+- [npm](https://www.npmjs.com/) (fourni avec Node.js)
+- [Git](https://git-scm.com/)
 
-## Développement
+## Cloner le projet
+
+```sh
+git clone https://github.com/houssamtermoussi/got.git
+cd got
+```
+
+## Installation et démarrage
 
 ```sh
 npm install
@@ -16,6 +23,12 @@ npm run dev
 ```
 
 Ouvre [http://localhost:5173](http://localhost:5173).
+
+## Stack
+
+- SvelteKit + TypeScript + adapter-static
+- GSAP (disponible) + parallax / révélations au scroll en CSS
+- Données JSON locales (pas de backend)
 
 ## Build
 
