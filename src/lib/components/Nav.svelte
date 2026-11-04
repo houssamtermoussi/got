@@ -9,7 +9,8 @@
 		{ href: '/', key: 'nav.home' },
 		{ href: '/personnages', key: 'nav.characters' },
 		{ href: '/maisons', key: 'nav.houses' },
-		{ href: '/carte', key: 'nav.map' }
+		{ href: '/carte', key: 'nav.map' },
+		{ href: '/hasard', key: 'nav.wheel' }
 	] as const;
 
 	function isActive(href: string, pathname: string) {

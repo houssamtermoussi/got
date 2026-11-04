@@ -4,7 +4,8 @@
 		"home": "Home",
 		"characters": "Characters",
 		"houses": "Houses",
-		"map": "Map"
+		"map": "Map",
+		"wheel": "Fate"
 	},
 	"hero": {
 		"title": "Game of Thrones",
@@ -53,6 +54,17 @@
 		"reset": "Reset view",
 		"placesCount": "{n} places",
 		"close": "Close"
+	},
+	"wheel": {
+		"title": "Wheel of fate",
+		"lead": "Let fate choose a character or a house. Spin the wheel and see who the Iron Throne marks.",
+		"tabCharacters": "Character",
+		"tabHouses": "House",
+		"spin": "Spin the wheel",
+		"spinning": "The wheel turns…",
+		"result": "Fate has chosen",
+		"hint": "Spin the wheel to reveal your draw.",
+		"discover": "View profile"
 	},
 	"footer": {
 		"note": "Unofficial fan site — content inspired by the world of George R. R. Martin.",

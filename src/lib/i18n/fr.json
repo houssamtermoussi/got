@@ -4,7 +4,8 @@
 		"home": "Accueil",
 		"characters": "Personnages",
 		"houses": "Maisons",
-		"map": "Carte"
+		"map": "Carte",
+		"wheel": "Hasard"
 	},
 	"hero": {
 		"title": "Le Trône de Fer",
@@ -53,6 +54,17 @@
 		"reset": "Recentrer",
 		"placesCount": "{n} lieux",
 		"close": "Fermer"
+	},
+	"wheel": {
+		"title": "Roue du hasard",
+		"lead": "Laissez le destin choisir un personnage ou une maison. Tournez la roue et découvrez qui le Trône de Fer désigne.",
+		"tabCharacters": "Personnage",
+		"tabHouses": "Maison",
+		"spin": "Tourner la roue",
+		"spinning": "La roue tourne…",
+		"result": "Le destin a choisi",
+		"hint": "Tournez la roue pour révéler votre tirage.",
+		"discover": "Voir la fiche"
 	},
 	"footer": {
 		"note": "Site fan non officiel — contenu inspiré de l'univers de George R. R. Martin.",
