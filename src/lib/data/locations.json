@@ -6,7 +6,7 @@
 		"region": { "fr": "Le Nord", "en": "The North" },
 		"type": { "fr": "Château", "en": "Castle" },
 		"houseId": "stark",
-		"x": 28,
+		"x": 21,
 		"y": 28,
 		"description": {
 			"fr": "Ancestral siège des Stark, Winterfell est une forteresse chauffée par des sources chaudes au cœur du Nord. Ses cryptes abritent les rois et seigneurs disparus, et les dieux bois y gardent un cœur-d'arbre millénaire.",
@@ -24,8 +24,8 @@
 		"region": { "fr": "Le Mur", "en": "The Wall" },
 		"type": { "fr": "Forteresse", "en": "Stronghold" },
 		"houseId": null,
-		"x": 32,
-		"y": 12,
+		"x": 26,
+		"y": 11,
 		"description": {
 			"fr": "Principal château de la Garde de Nuit, au pied du Mur de glace qui sépare le royaume des terres sauvages. D'ici, les frères noirs montent la garde contre ce qui rôde au-delà.",
 			"en": "Main castle of the Night's Watch, at the foot of the ice Wall that separates the realm from the wild lands. From here, the black brothers keep watch against what lurks Beyond."
@@ -42,8 +42,8 @@
 		"region": { "fr": "Terres de la Couronne", "en": "The Crownlands" },
 		"type": { "fr": "Capitale", "en": "Capital" },
 		"houseId": "baratheon",
-		"x": 34,
-		"y": 58,
+		"x": 26,
+		"y": 60,
 		"description": {
 			"fr": "Capitale des Sept Royaumes, bâtie par Aegon le Conquérant sur les collines de la Baie de la Néra. Le Trône de Fer y trône dans le Donjon Rouge, au-dessus des sept collines et de la fosse aux dragons.",
 			"en": "Capital of the Seven Kingdoms, built by Aegon the Conqueror on the hills of Blackwater Bay. The Iron Throne sits within the Red Keep, above seven hills and the dragonpit."
@@ -60,8 +60,8 @@
 		"region": { "fr": "Westerlands", "en": "The Westerlands" },
 		"type": { "fr": "Forteresse", "en": "Stronghold" },
 		"houseId": "lannister",
-		"x": 18,
-		"y": 52,
+		"x": 14,
+		"y": 58,
 		"description": {
 			"fr": "Forteresse taillée dans la roche et siège des Lannister, célèbre pour ses mines d'or inépuisables. Lannisport s'étend à ses pieds, port marchand riche et fortifié.",
 			"en": "Rock-hewn fortress and seat of the Lannisters, famed for its endless gold mines. Lannisport sprawls at its feet — a rich, fortified trading port."
@@ -78,8 +78,8 @@
 		"region": { "fr": "Terres de l'Orage", "en": "The Stormlands" },
 		"type": { "fr": "Château", "en": "Castle" },
 		"houseId": "baratheon",
-		"x": 38,
-		"y": 68,
+		"x": 31,
+		"y": 71,
 		"description": {
 			"fr": "Siège imprenable des Baratheon, dont les murs épais résistent aux tempêtes de la mer Orageuse depuis des millénaires. Sa légende remonte à Durran Dieux-de-Guerre.",
 			"en": "Impregnable seat of the Baratheons, its thick walls weathering Stormlander gales for millennia. Its legend reaches back to Durran Godsgrief."
@@ -96,8 +96,8 @@
 		"region": { "fr": "Le Bief", "en": "The Reach" },
 		"type": { "fr": "Château", "en": "Castle" },
 		"houseId": "tyrell",
-		"x": 24,
-		"y": 64,
+		"x": 19,
+		"y": 70,
 		"description": {
 			"fr": "Siège fleuri des Tyrell, au cœur du Bief fertile — grenier des Sept Royaumes. Ses jardins en terrasses, ses labyrinthes et ses tours roses en font l'un des plus beaux châteaux de Westeros.",
 			"en": "Flowering seat of the Tyrells, in the heart of the fertile Reach — breadbasket of the Seven Kingdoms. Terraced gardens, mazes, and rose towers make it one of Westeros's fairest castles."
@@ -114,8 +114,8 @@
 		"region": { "fr": "Dorne", "en": "Dorne" },
 		"type": { "fr": "Palais", "en": "Palace" },
 		"houseId": "martell",
-		"x": 36,
-		"y": 82,
+		"x": 24,
+		"y": 85,
 		"description": {
 			"fr": "Capitale de Dorne et siège des Martell, entre désert et mer d'Été. La Tour du Soleil et la Tour de la Lance dominent la Vieille Ville et les Water Gardens voisins.",
 			"en": "Capital of Dorne and seat of the Martells, between desert and the Summer Sea. The Tower of the Sun and Spear Tower overlook the Old Town and nearby Water Gardens."
@@ -132,8 +132,8 @@
 		"region": { "fr": "Îles de Fer", "en": "The Iron Islands" },
 		"type": { "fr": "Forteresse", "en": "Stronghold" },
 		"houseId": "greyjoy",
-		"x": 14,
-		"y": 42,
+		"x": 11,
+		"y": 43,
 		"description": {
 			"fr": "Siège des Greyjoy, forteresse dispersée sur des tours de pierre battues par les vagues, reliées par des ponts de bois et de corde. Ici règne le Dieu Noyé.",
 			"en": "Seat of the Greyjoys, a fortress scattered across wave-lashed towers of stone, linked by rope-and-timber bridges. Here the Drowned God holds sway."
@@ -150,8 +150,8 @@
 		"region": { "fr": "Le Val", "en": "The Vale" },
 		"type": { "fr": "Château", "en": "Castle" },
 		"houseId": "arryn",
-		"x": 40,
-		"y": 40,
+		"x": 30,
+		"y": 47,
 		"description": {
 			"fr": "Château des Arryn perché dans les Montagnes de la Lune, réputé imprenable. On n'y accède que par le Chemin de lune et la Porte Sanglante ; la Porte de la Lune ouvre sur le vide.",
 			"en": "Arryn castle perched in the Mountains of the Moon, said to be impregnable. Reached only via the mountain road and Bloody Gate; the Moon Door opens onto empty air."
@@ -168,8 +168,8 @@
 		"region": { "fr": "Baie de la Néra", "en": "Blackwater Bay" },
 		"type": { "fr": "Île-forteresse", "en": "Island fortress" },
 		"houseId": "targaryen",
-		"x": 42,
-		"y": 54,
+		"x": 35,
+		"y": 57,
 		"description": {
 			"fr": "Ancienne forteresse valyrienne des Targaryen, île volcanique face à Port-Réal. Ses remparts de pierre noire prennent la forme de dragons, et la Chambre peinte y abrite la table de guerre d'Aegon.",
 			"en": "Ancient Valyrian fortress of the Targaryens, a volcanic isle facing King's Landing. Black-stone walls shaped like dragons guard the Painted Table — Aegon's war map of Westeros."
@@ -186,8 +186,8 @@
 		"region": { "fr": "Cités libres", "en": "Free Cities" },
 		"type": { "fr": "Cité libre", "en": "Free City" },
 		"houseId": null,
-		"x": 58,
-		"y": 30,
+		"x": 55,
+		"y": 22,
 		"description": {
 			"fr": "La plus puissante des Cités libres, cachée dans un lagon derrière le Titan de pierre. Maison de la Banque de Fer, du Temple Noir et des Sans-Visage — secrets et fortunes s'y croisent.",
 			"en": "Mightiest of the Free Cities, hidden in a lagoon behind the stone Titan. Home of the Iron Bank, the House of Black and White, and the Faceless Men — secrets and fortunes intertwine here."
@@ -204,8 +204,8 @@
 		"region": { "fr": "Cités libres", "en": "Free Cities" },
 		"type": { "fr": "Cité libre", "en": "Free City" },
 		"houseId": null,
-		"x": 62,
-		"y": 48,
+		"x": 58,
+		"y": 42,
 		"description": {
 			"fr": "Cité libre marchande où Daenerys épouse Khal Drogo. Connue pour ses magisters, ses jardins de briques rouges et son commerce prospère avec Westeros.",
 			"en": "Free trading city where Daenerys marries Khal Drogo. Known for its magisters, red-brick gardens, and thriving trade with Westeros."
@@ -222,8 +222,8 @@
 		"region": { "fr": "Baie des Serfs", "en": "Slaver's Bay" },
 		"type": { "fr": "Cité", "en": "City" },
 		"houseId": "targaryen",
-		"x": 78,
-		"y": 62,
+		"x": 77,
+		"y": 65,
 		"description": {
 			"fr": "Plus grande cité de la Baie des Serfs, aux pyramides de briques. Daenerys y règne après avoir brisé les chaînes des esclaves et fait de la Grande Pyramide son siège.",
 			"en": "Largest city of Slaver's Bay, famed for its brick pyramids. Daenerys rules here after breaking the chains of the enslaved, making the Great Pyramid her seat."
@@ -240,8 +240,8 @@
 		"region": { "fr": "Mer Dothrak", "en": "Dothraki Sea" },
 		"type": { "fr": "Cité sacrée", "en": "Sacred city" },
 		"houseId": null,
-		"x": 82,
-		"y": 40,
+		"x": 84,
+		"y": 33,
 		"description": {
 			"fr": "Unique cité des Dothraki, au pied de la Mère des Montagnes. Nul sang ne doit y être versé ; les dosh khaleen y gardent les traditions du peuple du cheval.",
 			"en": "Only city of the Dothraki, at the foot of the Mother of Mountains. No blood may be shed there; the dosh khaleen keep the horse people's sacred traditions."
@@ -258,8 +258,8 @@
 		"region": { "fr": "Terres de l'Ombre", "en": "Shadow Lands" },
 		"type": { "fr": "Cité mystique", "en": "Mystic city" },
 		"houseId": null,
-		"x": 92,
-		"y": 72,
+		"x": 90,
+		"y": 73,
 		"description": {
 			"fr": "Cité mystérieuse au bout du monde connu, baignée d'ombre et de magie ancienne. Ses rues de pierre noire longent la rivière Ash, et les ombres y dansent plus haut que les hommes.",
 			"en": "Mysterious city at the edge of the known world, steeped in shadow and ancient magic. Black-stone streets follow the Ash river, and shadows there rise taller than men."

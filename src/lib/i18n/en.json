@@ -46,11 +46,12 @@
 		"continent": "Continent",
 		"region": "Region",
 		"type": "Type",
-		"rulingHouse": "House",
+		"rulingHouse": "Linked house",
 		"notable": "Notable",
 		"zoomIn": "Zoom in",
 		"zoomOut": "Zoom out",
 		"reset": "Reset view",
+		"placesCount": "{n} places",
 		"close": "Close"
 	},
 	"footer": {

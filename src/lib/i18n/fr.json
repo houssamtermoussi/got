@@ -46,11 +46,12 @@
 		"continent": "Continent",
 		"region": "Région",
 		"type": "Type",
-		"rulingHouse": "Maison",
+		"rulingHouse": "Maison liée",
 		"notable": "Points notables",
 		"zoomIn": "Zoom +",
 		"zoomOut": "Zoom −",
 		"reset": "Recentrer",
+		"placesCount": "{n} lieux",
 		"close": "Fermer"
 	},
 	"footer": {
