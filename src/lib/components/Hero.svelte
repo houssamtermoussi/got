@@ -170,18 +170,39 @@
 
 	.bg {
 		background:
-			radial-gradient(ellipse 70% 50% at 70% 40%, rgba(139, 30, 30, 0.35), transparent 60%),
-			radial-gradient(ellipse 50% 40% at 20% 70%, rgba(201, 162, 39, 0.12), transparent 55%),
-			linear-gradient(180deg, #14110e 0%, #0b0a09 100%),
-			url('/images/map/realms.svg') center 30% / cover no-repeat;
-		filter: saturate(0.7) brightness(0.55);
+			radial-gradient(ellipse 55% 45% at 72% 38%, rgba(139, 30, 30, 0.42), transparent 62%),
+			radial-gradient(ellipse 40% 35% at 18% 62%, rgba(90, 110, 135, 0.18), transparent 58%),
+			radial-gradient(ellipse 45% 30% at 48% 18%, rgba(201, 162, 39, 0.1), transparent 55%),
+			linear-gradient(180deg, rgba(8, 7, 6, 0.35) 0%, rgba(7, 6, 5, 0.82) 100%),
+			url('/images/map/realms.svg') center 28% / cover no-repeat;
+		filter: saturate(0.55) brightness(0.42) contrast(1.15);
 		transform: scale(1.08);
 	}
 
 	.fog {
 		background:
-			linear-gradient(180deg, rgba(11, 10, 9, 0.2), rgba(11, 10, 9, 0.75) 70%, #0b0a09),
-			radial-gradient(ellipse at 50% 80%, rgba(42, 37, 32, 0.7), transparent 60%);
+			linear-gradient(
+				180deg,
+				rgba(7, 6, 5, 0.15) 0%,
+				rgba(7, 6, 5, 0.45) 45%,
+				rgba(7, 6, 5, 0.88) 78%,
+				var(--bg) 100%
+			),
+			radial-gradient(ellipse 90% 55% at 50% 100%, rgba(42, 37, 32, 0.85), transparent 65%),
+			radial-gradient(ellipse 50% 40% at 80% 30%, rgba(139, 30, 30, 0.18), transparent 60%),
+			radial-gradient(ellipse 40% 35% at 15% 55%, rgba(70, 90, 110, 0.14), transparent 55%);
+		animation: mist-drift 28s ease-in-out infinite alternate;
+	}
+
+	@keyframes mist-drift {
+		from {
+			opacity: 0.88;
+			transform: translate3d(0, 0, 0) scale(1);
+		}
+		to {
+			opacity: 1;
+			transform: translate3d(-1.5%, 1.2%, 0) scale(1.04);
+		}
 	}
 
 	.throne {
@@ -189,8 +210,8 @@
 		z-index: 1;
 		right: max(1.25rem, calc((100% - 1120px) / 2));
 		bottom: 3.5rem;
-		width: min(34vw, 440px, calc((100vh - var(--nav-h) - 6rem) * 0.646));
-		aspect-ratio: 900 / 1392;
+		width: min(34vw, 440px, calc((100vh - var(--nav-h) - 6rem) * 0.75));
+		aspect-ratio: 900 / 1200;
 		pointer-events: none;
 		will-change: transform;
 	}

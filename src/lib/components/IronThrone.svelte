@@ -68,7 +68,7 @@
 	<div class="tilt" bind:this={tiltEl}>
 		<div class="float">
 			<div class="image" bind:this={imgWrap} style="--src: url({SRC})">
-				<img src={SRC} alt="" width="900" height="1392" decoding="async" />
+				<img src={SRC} alt="" width="900" height="1200" decoding="async" />
 				<div class="sheen"></div>
 			</div>
 		</div>

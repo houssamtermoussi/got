@@ -1,12 +1,14 @@
 :root {
-	--bg: #0b0a09;
-	--bg-elevated: #161311;
-	--bg-card: #1c1814;
+	--bg: #070605;
+	--bg-elevated: #14110e;
+	--bg-card: #1a1612;
 	--fog: #2a2520;
 	--gold: #c9a227;
 	--gold-dim: #8a7020;
 	--blood: #8b1e1e;
 	--blood-bright: #b42828;
+	--ice: #6a7f96;
+	--ash: #3a342e;
 	--text: #e8e0d5;
 	--muted: #9a9080;
 	--border: rgba(201, 162, 39, 0.22);
@@ -16,6 +18,8 @@
 	--nav-h: 4.25rem;
 	--radius: 2px;
 	--ease: cubic-bezier(0.22, 1, 0.36, 1);
+	--grain: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.55 0 0 0 0 0.48 0 0 0 0 0.35 0 0 0 0.55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+	--sigil-pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='%23c9a227' stroke-width='0.6' opacity='0.09'%3E%3Cpath d='M60 18 L66 42 L90 42 L71 57 L78 82 L60 66 L42 82 L49 57 L30 42 L54 42 Z'/%3E%3Ccircle cx='60' cy='52' r='5'/%3E%3C/g%3E%3C/svg%3E");
 }
 
 *,
@@ -42,11 +46,45 @@ body {
 }
 
 body {
+	position: relative;
+	isolation: isolate;
+	background-color: var(--bg);
 	background-image:
-		radial-gradient(ellipse 120% 80% at 50% -20%, rgba(139, 30, 30, 0.18), transparent 55%),
-		radial-gradient(ellipse 80% 50% at 100% 50%, rgba(201, 162, 39, 0.05), transparent 50%),
-		linear-gradient(180deg, #0b0a09 0%, #100e0c 50%, #0b0a09 100%);
+		radial-gradient(ellipse 130% 70% at 50% -15%, rgba(120, 28, 28, 0.28), transparent 58%),
+		radial-gradient(ellipse 55% 45% at 0% 35%, rgba(90, 110, 135, 0.1), transparent 55%),
+		radial-gradient(ellipse 50% 40% at 100% 70%, rgba(201, 162, 39, 0.07), transparent 55%),
+		radial-gradient(ellipse 80% 50% at 50% 110%, rgba(40, 22, 16, 0.55), transparent 60%),
+		linear-gradient(180deg, #0a0807 0%, #070605 42%, #0c0a08 72%, #050403 100%);
 	background-attachment: fixed;
+}
+
+body::before {
+	content: '';
+	position: fixed;
+	inset: 0;
+	z-index: -2;
+	pointer-events: none;
+	background-image: var(--sigil-pattern);
+	background-size: 120px 120px;
+	background-repeat: repeat;
+	opacity: 0.55;
+	mask-image: radial-gradient(ellipse 75% 65% at 50% 40%, black 20%, transparent 75%);
+}
+
+body::after {
+	content: '';
+	position: fixed;
+	inset: 0;
+	z-index: -1;
+	pointer-events: none;
+	background-image:
+		radial-gradient(ellipse 100% 100% at 50% 50%, transparent 42%, rgba(0, 0, 0, 0.72) 100%),
+		var(--grain);
+	background-size:
+		auto,
+		180px 180px;
+	opacity: 0.45;
+	mix-blend-mode: overlay;
 }
 
 a {

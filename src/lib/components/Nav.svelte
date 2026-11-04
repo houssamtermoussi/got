@@ -62,7 +62,7 @@
 		z-index: 50;
 		height: var(--nav-h);
 		backdrop-filter: blur(12px);
-		background: rgba(11, 10, 9, 0.82);
+		background: rgba(7, 6, 5, 0.86);
 		border-bottom: 1px solid var(--border);
 	}
 

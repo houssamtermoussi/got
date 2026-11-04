@@ -63,7 +63,14 @@
 
 <style>
 	.featured {
-		background: linear-gradient(180deg, transparent, rgba(22, 19, 17, 0.65), transparent);
+		background: linear-gradient(
+			180deg,
+			transparent,
+			rgba(20, 16, 12, 0.55) 40%,
+			rgba(90, 28, 28, 0.08) 55%,
+			rgba(20, 16, 12, 0.55) 70%,
+			transparent
+		);
 	}
 
 	.head {
