@@ -298,5 +298,125 @@
 			"fr": "Sœur de Catelyn et veuve de Jon Arryn, Lysa règne sur le Val depuis les Eyrié. Possessive et instable, elle devient l'outil de Littlefinger.",
 			"en": "Sister of Catelyn and widow of Jon Arryn, Lysa rules the Vale from the Eyrie. Possessive and unstable, she becomes Littlefinger's pawn."
 		}
+	},
+	{
+		"id": "tywin",
+		"name": { "fr": "Tywin Lannister", "en": "Tywin Lannister" },
+		"houseId": "lannister",
+		"titles": {
+			"fr": ["Seigneur de Casterly Rock", "Main du Roi"],
+			"en": ["Lord of Casterly Rock", "Hand of the King"]
+		},
+		"image": "/images/characters/tywin.jpg",
+		"accent": "#c9a227",
+		"bio": {
+			"fr": "Patriarche impitoyable des Lannister, Tywin orchestre le pouvoir depuis des décennies. Stratège froid, il place le nom de sa maison au-dessus de tout.",
+			"en": "Ruthless patriarch of the Lannisters, Tywin has orchestrated power for decades. A cold strategist, he places his house's name above all else."
+		}
+	},
+	{
+		"id": "stannis",
+		"name": { "fr": "Stannis Baratheon", "en": "Stannis Baratheon" },
+		"houseId": "baratheon",
+		"titles": {
+			"fr": ["Seigneur de Dragonstone", "Roi prétendant"],
+			"en": ["Lord of Dragonstone", "Claimant King"]
+		},
+		"image": "/images/characters/stannis.jpg",
+		"accent": "#d4a017",
+		"bio": {
+			"fr": "Frère cadet de Robert, Stannis revendique le Trône de Fer par droit de sang. Rigide et inflexible, il s'allie à la Dame Rouge pour forcer son destin.",
+			"en": "Younger brother of Robert, Stannis claims the Iron Throne by right of blood. Rigid and unyielding, he allies with the Red Woman to force his fate."
+		}
+	},
+	{
+		"id": "joffrey",
+		"name": { "fr": "Joffrey Baratheon", "en": "Joffrey Baratheon" },
+		"houseId": "baratheon",
+		"titles": {
+			"fr": ["Roi des Sept Royaumes", "Prince héritier"],
+			"en": ["King of the Seven Kingdoms", "Crown Prince"]
+		},
+		"image": "/images/characters/joffrey.jpg",
+		"accent": "#d4a017",
+		"bio": {
+			"fr": "Fils officiel de Robert, Joffrey monte sur le trône après sa mort. Cruel et capricieux, son règne bref laisse une traînée de terreur à King's Landing.",
+			"en": "Official son of Robert, Joffrey takes the throne after his death. Cruel and capricious, his brief reign leaves a trail of terror in King's Landing."
+		}
+	},
+	{
+		"id": "petyr",
+		"name": { "fr": "Petyr Baelish", "en": "Petyr Baelish" },
+		"houseId": "arryn",
+		"titles": {
+			"fr": ["Maître de la Monnaie", "Lord Protecteur du Val"],
+			"en": ["Master of Coin", "Lord Protector of the Vale"]
+		},
+		"image": "/images/characters/petyr.jpg",
+		"accent": "#5b7fa6",
+		"bio": {
+			"fr": "Surnommé Littlefinger, Petyr tisse des intrigues dans l'ombre. Né mineur, il gravit le pouvoir en manipulant dettes, secrets et alliances.",
+			"en": "Nicknamed Littlefinger, Petyr weaves intrigues from the shadows. Born minor, he climbs to power by manipulating debts, secrets, and alliances."
+		}
+	},
+	{
+		"id": "olenna",
+		"name": { "fr": "Olenna Tyrell", "en": "Olenna Tyrell" },
+		"houseId": "tyrell",
+		"titles": {
+			"fr": ["Reine des Épines", "Dame de Hautjardin"],
+			"en": ["Queen of Thorns", "Lady of Highgarden"]
+		},
+		"image": "/images/characters/olenna.jpg",
+		"accent": "#2f7d4a",
+		"bio": {
+			"fr": "Matriarche acerbe des Tyrell, Olenna protège sa maison par l'esprit et le poison. Elle orchestre la chute de Joffrey pour défendre Margaery.",
+			"en": "Acerbic matriarch of the Tyrells, Olenna protects her house with wit and poison. She engineers Joffrey's fall to defend Margaery."
+		}
+	},
+	{
+		"id": "jorah",
+		"name": { "fr": "Jorah Mormont", "en": "Jorah Mormont" },
+		"houseId": "stark",
+		"titles": {
+			"fr": ["Ser", "Conseiller de Daenerys"],
+			"en": ["Ser", "Advisor to Daenerys"]
+		},
+		"image": "/images/characters/jorah.jpg",
+		"accent": "#9aa4b2",
+		"bio": {
+			"fr": "Exilé du Nord pour trafic d'esclaves, Jorah sert Daenerys en Essos. Traître repenti, sa loyauté envers la Khaleesi redéfinit son honneur.",
+			"en": "Exiled from the North for slave trading, Jorah serves Daenerys in Essos. A repentant traitor, his loyalty to the Khaleesi redefines his honor."
+		}
+	},
+	{
+		"id": "davos",
+		"name": { "fr": "Davos Seaworth", "en": "Davos Seaworth" },
+		"houseId": "baratheon",
+		"titles": {
+			"fr": ["Chevalier de l'Oignon", "Main du Roi"],
+			"en": ["Onion Knight", "Hand of the King"]
+		},
+		"image": "/images/characters/davos.jpg",
+		"accent": "#d4a017",
+		"bio": {
+			"fr": "Contrebandier anobli par Stannis, Davos devient sa conscience. Loyal et pragmatique, il survit aux tempêtes pour conseiller Jon Snow.",
+			"en": "A smuggler knighted by Stannis, Davos becomes his conscience. Loyal and pragmatic, he survives the storms to counsel Jon Snow."
+		}
+	},
+	{
+		"id": "ellaria",
+		"name": { "fr": "Ellaria Sand", "en": "Ellaria Sand" },
+		"houseId": "martell",
+		"titles": {
+			"fr": ["Paramour d'Oberyn", "Dame de Dorne"],
+			"en": ["Paramour of Oberyn", "Lady of Dorne"]
+		},
+		"image": "/images/characters/ellaria.jpg",
+		"accent": "#c45c26",
+		"bio": {
+			"fr": "Compagne d'Oberyn et mère des Vipères des Sables, Ellaria brûle de vengeance après sa mort. Elle renverse Dorne pour punir les Lannister.",
+			"en": "Companion of Oberyn and mother of the Sand Snakes, Ellaria burns for vengeance after his death. She overturns Dorne to punish the Lannisters."
+		}
 	}
 ]
