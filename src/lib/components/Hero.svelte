@@ -209,7 +209,7 @@
 		position: absolute;
 		z-index: 1;
 		right: max(1.25rem, calc((100% - 1120px) / 2));
-		bottom: 3.5rem;
+		bottom: 7.5rem;
 		width: min(34vw, 440px, calc((100vh - var(--nav-h) - 6rem) * 0.75));
 		aspect-ratio: 900 / 1200;
 		pointer-events: none;
