@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { resolve } from '$app/paths';
 	import CharacterCard from '#lib/components/CharacterCard.svelte';
 	import FortuneWheel, { type WheelItem } from '#lib/components/FortuneWheel.svelte';
 	import HouseCard from '#lib/components/HouseCard.svelte';
@@ -99,13 +100,19 @@
 					{#if resultCharacter}
 						<p class="eyebrow">{$t('wheel.result')}</p>
 						<CharacterCard character={resultCharacter} house={getHouse(resultCharacter.houseId)} />
-						<a class="btn btn-ghost link" href={`/personnages/${resultCharacter.id}`}>
+						<a
+							class="btn btn-ghost link"
+							href={resolve('/personnages/[id]', { id: resultCharacter.id })}
+						>
 							{$t('wheel.discover')}
 						</a>
 					{:else if resultHouse}
 						<p class="eyebrow">{$t('wheel.result')}</p>
 						<HouseCard house={resultHouse} />
-						<a class="btn btn-ghost link" href={`/maisons/${resultHouse.id}`}>
+						<a
+							class="btn btn-ghost link"
+							href={resolve('/maisons/[id]', { id: resultHouse.id })}
+						>
 							{$t('wheel.discover')}
 						</a>
 					{:else}

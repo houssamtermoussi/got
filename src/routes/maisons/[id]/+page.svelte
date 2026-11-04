@@ -1,8 +1,10 @@
 <script lang="ts">
+	import { resolve } from '$app/paths';
 	import CharacterCard from '#lib/components/CharacterCard.svelte';
 	import Reveal from '#lib/components/Reveal.svelte';
 	import { charactersByHouse } from '#lib/data';
 	import { locale, localized, t } from '#lib/i18n/store';
+	import { media } from '#lib/media';
 	import type { PageProps } from './$types';
 
 	let { data }: PageProps = $props();
@@ -17,9 +19,9 @@
 <section class="section detail">
 	<div class="container">
 		<Reveal>
-			<a class="back" href="/maisons">← {$t('houses.back')}</a>
+			<a class="back" href={resolve('/maisons')}>← {$t('houses.back')}</a>
 			<div class="hero-house" style={`--accent:${house.color}`}>
-				<img class="sigil" src={house.sigil} alt="" />
+				<img class="sigil" src={media(house.sigil)} alt="" />
 				<div>
 					<h1>{localized(house.name, $locale)}</h1>
 					<p class="words">« {localized(house.words, $locale)} »</p>

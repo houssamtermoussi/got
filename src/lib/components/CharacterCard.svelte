@@ -1,6 +1,8 @@
 <script lang="ts">
+	import { resolve } from '$app/paths';
 	import type { Character, House } from '#lib/data';
 	import { localized, locale } from '#lib/i18n/store';
+	import { media } from '#lib/media';
 
 	let {
 		character,
@@ -11,9 +13,13 @@
 	} = $props();
 </script>
 
-<a class="card" href={`/personnages/${character.id}`} style={`--accent:${character.accent}`}>
+<a
+	class="card"
+	href={resolve('/personnages/[id]', { id: character.id })}
+	style={`--accent:${character.accent}`}
+>
 	<div class="media">
-		<img src={character.image} alt={localized(character.name, $locale)} loading="lazy" />
+		<img src={media(character.image)} alt={localized(character.name, $locale)} loading="lazy" />
 		<div class="veil"></div>
 	</div>
 	<div class="body">

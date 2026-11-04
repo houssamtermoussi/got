@@ -39,6 +39,14 @@ npm run preview
 
 Le build génère un site statique dans `build/`.
 
+En local, le site est servi sous le préfixe `/got` (comme sur GitHub Pages) : [http://localhost:5173/got/](http://localhost:5173/got/).
+
+## Déploiement (GitHub Pages)
+
+Le workflow `.github/workflows/deploy.yml` publie automatiquement le site à chaque push sur `main`.
+
+URL : [https://houssamtermoussi.github.io/got/](https://houssamtermoussi.github.io/got/)
+
 ## Pages
 
 | Route | Contenu |

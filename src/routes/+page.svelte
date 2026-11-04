@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { resolve } from '$app/paths';
 	import Hero from '#lib/components/Hero.svelte';
 	import CharacterCard from '#lib/components/CharacterCard.svelte';
 	import HouseCard from '#lib/components/HouseCard.svelte';
@@ -30,7 +31,7 @@
 		<Reveal>
 			<div class="head">
 				<h2 class="section-title">{$t('home.featuredCharacters')}</h2>
-				<a class="more" href="/personnages">{$t('home.viewAll')} →</a>
+				<a class="more" href={resolve('/personnages')}>{$t('home.viewAll')} →</a>
 			</div>
 		</Reveal>
 		<div class="grid chars">
@@ -48,7 +49,7 @@
 		<Reveal>
 			<div class="head">
 				<h2 class="section-title">{$t('home.featuredHouses')}</h2>
-				<a class="more" href="/maisons">{$t('home.viewAll')} →</a>
+				<a class="more" href={resolve('/maisons')}>{$t('home.viewAll')} →</a>
 			</div>
 		</Reveal>
 		<div class="grid houses">

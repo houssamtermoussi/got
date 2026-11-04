@@ -1,6 +1,8 @@
 <script lang="ts">
+	import { asset, resolve } from '$app/paths';
 	import { getHouse, locations, type Location } from '#lib/data';
 	import { locale, localized, t } from '#lib/i18n/store';
+	import { media } from '#lib/media';
 
 	type Filter = 'all' | 'westeros' | 'essos';
 
@@ -117,7 +119,7 @@
 				style={`transform: translate(${tx}px, ${ty}px) scale(${scale})`}
 			>
 				<div class="canvas">
-					<img class="basemap" src="/images/map/realms.svg" alt="" draggable="false" />
+					<img class="basemap" src={asset('/images/map/realms.svg')} alt="" draggable="false" />
 					{#each filtered as loc (loc.id)}
 						<button
 							type="button"
@@ -158,8 +160,8 @@
 				<p class="region">{localized(selected.region, $locale)}</p>
 
 				{#if selectedHouse}
-					<a class="house-link" href={`/maisons/${selectedHouse.id}`}>
-						<img src={selectedHouse.sigil} alt="" class="house-sigil" />
+					<a class="house-link" href={resolve('/maisons/[id]', { id: selectedHouse.id })}>
+						<img src={media(selectedHouse.sigil)} alt="" class="house-sigil" />
 						<div>
 							<span class="house-label">{$t('map.rulingHouse')}</span>
 							<strong style={`color:${selectedHouse.color}`}

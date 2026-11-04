@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { resolve } from '$app/paths';
 	import { page } from '$app/state';
 	import { t } from '#lib/i18n/store';
 	import LangSwitch from './LangSwitch.svelte';
@@ -13,9 +14,10 @@
 		{ href: '/hasard', key: 'nav.wheel' }
 	] as const;
 
-	function isActive(href: string, pathname: string) {
-		if (href === '/') return pathname === '/';
-		return pathname.startsWith(href);
+	function isActive(href: string) {
+		const id = page.route.id ?? '';
+		if (href === '/') return id === '/';
+		return id === href || id.startsWith(`${href}/`);
 	}
 
 	$effect(() => {
@@ -26,7 +28,7 @@
 
 <header class="nav">
 	<div class="inner container">
-		<a class="brand" href="/" aria-label={$t('brand')}>
+		<a class="brand" href={resolve('/')} aria-label={$t('brand')}>
 			<span class="crest" aria-hidden="true">⚔</span>
 			<span class="name">{$t('brand')}</span>
 		</a>
@@ -45,8 +47,8 @@
 		<nav id="main-nav" class:open>
 			{#each links as link}
 				<a
-					href={link.href}
-					class:active={isActive(link.href, page.url.pathname)}
+					href={resolve(link.href)}
+					class:active={isActive(link.href)}
 				>
 					{$t(link.key)}
 				</a>

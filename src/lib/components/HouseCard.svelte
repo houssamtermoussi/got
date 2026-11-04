@@ -1,13 +1,15 @@
 <script lang="ts">
+	import { resolve } from '$app/paths';
 	import type { House } from '#lib/data';
 	import { localized, locale } from '#lib/i18n/store';
+	import { media } from '#lib/media';
 
 	let { house }: { house: House } = $props();
 </script>
 
-<a class="card" href={`/maisons/${house.id}`} style={`--accent:${house.color}`}>
+<a class="card" href={resolve('/maisons/[id]', { id: house.id })} style={`--accent:${house.color}`}>
 	<div class="sigil-wrap">
-		<img class="sigil" src={house.sigil} alt="" loading="lazy" />
+		<img class="sigil" src={media(house.sigil)} alt="" loading="lazy" />
 	</div>
 	<div class="body">
 		<h3>{localized(house.name, $locale)}</h3>

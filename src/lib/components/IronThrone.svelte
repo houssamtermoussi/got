@@ -1,7 +1,8 @@
 <script lang="ts">
+	import { asset } from '$app/paths';
 	import { onMount } from 'svelte';
 
-	const SRC = '/images/iron-throne.webp';
+	const SRC = asset('/images/iron-throne.webp');
 
 	const round = (n: number) => Math.round(n * 10) / 10;
 

@@ -1,7 +1,10 @@
 <script lang="ts">
+	import { asset, resolve } from '$app/paths';
 	import { onMount } from 'svelte';
 	import { t } from '#lib/i18n/store';
 	import IronThrone from './IronThrone.svelte';
+
+	const mapBg = asset('/images/map/realms.svg');
 
 	let root: HTMLElement | undefined = $state();
 	let layerBg: HTMLElement | undefined = $state();
@@ -132,7 +135,7 @@
 	});
 </script>
 
-<section class="hero" bind:this={root} aria-label={$t('hero.title')}>
+<section class="hero" bind:this={root} aria-label={$t('hero.title')} style={`--map-bg: url('${mapBg}')`}>
 	<div class="layer bg" bind:this={layerBg} aria-hidden="true"></div>
 	<div class="layer fog" bind:this={layerFog} aria-hidden="true"></div>
 	<div class="throne" bind:this={layerThrone}>
@@ -143,8 +146,8 @@
 		<h1>{$t('hero.title')}</h1>
 		<p class="sub">{$t('hero.subtitle')}</p>
 		<div class="actions">
-			<a class="btn" href="/personnages">{$t('hero.ctaCharacters')}</a>
-			<a class="btn btn-ghost" href="/carte">{$t('hero.ctaMap')}</a>
+			<a class="btn" href={resolve('/personnages')}>{$t('hero.ctaCharacters')}</a>
+			<a class="btn btn-ghost" href={resolve('/carte')}>{$t('hero.ctaMap')}</a>
 		</div>
 	</div>
 	<div class="fade" aria-hidden="true"></div>
@@ -174,7 +177,7 @@
 			radial-gradient(ellipse 40% 35% at 18% 62%, rgba(90, 110, 135, 0.18), transparent 58%),
 			radial-gradient(ellipse 45% 30% at 48% 18%, rgba(201, 162, 39, 0.1), transparent 55%),
 			linear-gradient(180deg, rgba(8, 7, 6, 0.35) 0%, rgba(7, 6, 5, 0.82) 100%),
-			url('/images/map/realms.svg') center 28% / cover no-repeat;
+			var(--map-bg) center 28% / cover no-repeat;
 		filter: saturate(0.55) brightness(0.42) contrast(1.15);
 		transform: scale(1.08);
 	}

@@ -1,7 +1,9 @@
 <script lang="ts">
+	import { resolve } from '$app/paths';
 	import Reveal from '#lib/components/Reveal.svelte';
 	import { getHouse } from '#lib/data';
 	import { locale, localized, t } from '#lib/i18n/store';
+	import { media } from '#lib/media';
 	import type { PageProps } from './$types';
 
 	let { data }: PageProps = $props();
@@ -17,17 +19,19 @@
 	<div class="container layout">
 		<Reveal>
 			<div class="portrait" style={`--accent:${character.accent}`}>
-				<img src={character.image} alt={localized(character.name, $locale)} />
+				<img src={media(character.image)} alt={localized(character.name, $locale)} />
 			</div>
 		</Reveal>
 		<Reveal delay={100}>
 			<div class="info">
-				<a class="back" href="/personnages">← {$t('characters.back')}</a>
+				<a class="back" href={resolve('/personnages')}>← {$t('characters.back')}</a>
 				<h1>{localized(character.name, $locale)}</h1>
 				{#if house}
 					<p class="house">
 						{$t('characters.house')}:
-						<a href={`/maisons/${house.id}`}>{localized(house.name, $locale)}</a>
+						<a href={resolve('/maisons/[id]', { id: house.id })}
+							>{localized(house.name, $locale)}</a
+						>
 					</p>
 				{/if}
 				<div class="titles">
@@ -40,7 +44,7 @@
 				</div>
 				<p class="bio">{localized(character.bio, $locale)}</p>
 				{#if house}
-					<a class="btn btn-ghost" href={`/maisons/${house.id}`}>
+					<a class="btn btn-ghost" href={resolve('/maisons/[id]', { id: house.id })}>
 						{$t('characters.relatedHouse')}
 					</a>
 				{/if}
