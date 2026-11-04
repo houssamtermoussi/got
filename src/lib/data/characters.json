@@ -418,5 +418,65 @@
 			"fr": "Compagne d'Oberyn et mère des Vipères des Sables, Ellaria brûle de vengeance après sa mort. Elle renverse Dorne pour punir les Lannister.",
 			"en": "Companion of Oberyn and mother of the Sand Snakes, Ellaria burns for vengeance after his death. She overturns Dorne to punish the Lannisters."
 		}
+	},
+	{
+		"id": "bronn",
+		"name": { "fr": "Bronn", "en": "Bronn" },
+		"houseId": "lannister",
+		"titles": {
+			"fr": ["Ser", "Seigneur de Hautjardin"],
+			"en": ["Ser", "Lord of Highgarden"]
+		},
+		"image": "/images/characters/bronn.jpg",
+		"accent": "#c9a227",
+		"bio": {
+			"fr": "Mercenaire cynique et redoutable à l'épée, Bronn s'allie à Tyrion puis aux Lannister. Il gravit les rangs par le sang, l'humour et l'opportunisme.",
+			"en": "A cynical sellsword deadly with a blade, Bronn allies with Tyrion then the Lannisters. He climbs the ranks through blood, humor, and opportunism."
+		}
+	},
+	{
+		"id": "sandor",
+		"name": { "fr": "Sandor Clegane", "en": "Sandor Clegane" },
+		"houseId": "lannister",
+		"titles": {
+			"fr": ["Le Limier", "Chien de garde de Joffrey"],
+			"en": ["The Hound", "Joffrey's sworn shield"]
+		},
+		"image": "/images/characters/sandor.jpg",
+		"accent": "#c9a227",
+		"bio": {
+			"fr": "Frère brisé de la Montagne, Sandor sert les Lannister avant de fuir. Derrière la violence et la peur du feu, une rédemption improbable prend forme.",
+			"en": "Broken brother of the Mountain, Sandor serves the Lannisters before fleeing. Behind the violence and fear of fire, an unlikely redemption takes shape."
+		}
+	},
+	{
+		"id": "melisandre",
+		"name": { "fr": "Melisandre", "en": "Melisandre" },
+		"houseId": "baratheon",
+		"titles": {
+			"fr": ["Dame Rouge", "Prêtresse de R'hllor"],
+			"en": ["Red Woman", "Priestess of R'hllor"]
+		},
+		"image": "/images/characters/melisandre.jpg",
+		"accent": "#d4a017",
+		"bio": {
+			"fr": "Prêtresse de R'hllor, Melisandre pousse Stannis vers le trône par la foi et le feu. Ses visions guident — et trompent — les destinées de Westeros.",
+			"en": "Priestess of R'hllor, Melisandre drives Stannis toward the throne by faith and fire. Her visions guide — and mislead — the destinies of Westeros."
+		}
+	},
+	{
+		"id": "varys",
+		"name": { "fr": "Varys", "en": "Varys" },
+		"houseId": "targaryen",
+		"titles": {
+			"fr": ["Maître des Whisperers", "L'Araignée"],
+			"en": ["Master of Whisperers", "The Spider"]
+		},
+		"image": "/images/characters/varys.jpg",
+		"accent": "#8b1e1e",
+		"bio": {
+			"fr": "Eunuque et maître des espions, Varys tisse sa toile à travers les Sept Royaumes. Il affirme servir le royaume — et finit par soutenir Daenerys.",
+			"en": "Eunuch and master of spies, Varys weaves his web across the Seven Kingdoms. He claims to serve the realm — and ultimately backs Daenerys."
+		}
 	}
 ]
