@@ -5,6 +5,7 @@
 	import { media } from '#lib/media';
 
 	type Filter = 'all' | 'westeros' | 'essos';
+	type PointerState = { x: number; y: number };
 
 	let filter: Filter = $state('all');
 	let selected: Location | null = $state(null);
@@ -12,8 +13,15 @@
 	let tx = $state(0);
 	let ty = $state(0);
 	let dragging = $state(false);
-	let lastX = 0;
-	let lastY = 0;
+	let panelEl: HTMLElement | undefined = $state();
+
+	const pointers = new Map<number, PointerState>();
+	let pinchStartDist = 0;
+	let pinchStartScale = 1;
+	let panOriginX = 0;
+	let panOriginY = 0;
+	let panStartTx = 0;
+	let panStartTy = 0;
 
 	const filtered = $derived(
 		locations.filter((l) => filter === 'all' || l.continent === filter)
@@ -23,6 +31,11 @@
 
 	function select(loc: Location) {
 		selected = loc;
+		if (typeof window !== 'undefined' && window.matchMedia('(max-width: 900px)').matches) {
+			queueMicrotask(() => {
+				panelEl?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+			});
+		}
 	}
 
 	function setFilter(next: Filter) {
@@ -32,8 +45,12 @@
 		}
 	}
 
+	function clampScale(value: number) {
+		return Math.min(2.6, Math.max(0.75, value));
+	}
+
 	function zoomBy(delta: number) {
-		scale = Math.min(2.6, Math.max(0.75, scale + delta));
+		scale = clampScale(scale + delta);
 	}
 
 	function onWheel(e: WheelEvent) {
@@ -41,29 +58,87 @@
 		zoomBy(e.deltaY > 0 ? -0.08 : 0.08);
 	}
 
+	function pointerDistance(a: PointerState, b: PointerState) {
+		const dx = a.x - b.x;
+		const dy = a.y - b.y;
+		return Math.hypot(dx, dy);
+	}
+
+	function pointerMidpoint(a: PointerState, b: PointerState) {
+		return { x: (a.x + b.x) / 2, y: (a.y + b.y) / 2 };
+	}
+
+	function beginPan(x: number, y: number) {
+		panOriginX = x;
+		panOriginY = y;
+		panStartTx = tx;
+		panStartTy = ty;
+		dragging = true;
+	}
+
+	function beginPinch() {
+		const [a, b] = [...pointers.values()];
+		pinchStartDist = pointerDistance(a, b) || 1;
+		pinchStartScale = scale;
+		const mid = pointerMidpoint(a, b);
+		beginPan(mid.x, mid.y);
+	}
+
 	function onPointerDown(e: PointerEvent) {
 		const target = e.target as HTMLElement;
-		if (target.closest('.marker')) return;
-		dragging = true;
-		lastX = e.clientX;
-		lastY = e.clientY;
+		if (target.closest('.marker') && pointers.size === 0) return;
+
+		pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
 		(e.currentTarget as HTMLElement).setPointerCapture(e.pointerId);
+
+		if (pointers.size === 1) {
+			beginPan(e.clientX, e.clientY);
+		} else if (pointers.size === 2) {
+			beginPinch();
+		}
 	}
 
 	function onPointerMove(e: PointerEvent) {
-		if (!dragging) return;
-		tx += e.clientX - lastX;
-		ty += e.clientY - lastY;
-		lastX = e.clientX;
-		lastY = e.clientY;
+		if (!pointers.has(e.pointerId)) return;
+		pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+
+		if (pointers.size === 1) {
+			const p = pointers.values().next().value!;
+			tx = panStartTx + (p.x - panOriginX);
+			ty = panStartTy + (p.y - panOriginY);
+			dragging = true;
+			return;
+		}
+
+		if (pointers.size >= 2) {
+			const [a, b] = [...pointers.values()];
+			const dist = pointerDistance(a, b) || 1;
+			scale = clampScale(pinchStartScale * (dist / pinchStartDist));
+			const mid = pointerMidpoint(a, b);
+			tx = panStartTx + (mid.x - panOriginX);
+			ty = panStartTy + (mid.y - panOriginY);
+			dragging = true;
+		}
 	}
 
 	function onPointerUp(e: PointerEvent) {
-		dragging = false;
+		pointers.delete(e.pointerId);
 		try {
 			(e.currentTarget as HTMLElement).releasePointerCapture(e.pointerId);
 		} catch {
 			/* ignore */
+		}
+
+		if (pointers.size === 1) {
+			const remaining = pointers.values().next().value!;
+			beginPan(remaining.x, remaining.y);
+			return;
+		}
+
+		if (pointers.size === 0) {
+			dragging = false;
+		} else if (pointers.size === 2) {
+			beginPinch();
 		}
 	}
 
@@ -141,7 +216,7 @@
 			<p class="scale-badge" aria-hidden="true">{Math.round(scale * 100)}%</p>
 		</div>
 
-		<aside class="panel" class:has-selection={!!selected}>
+		<aside class="panel" class:has-selection={!!selected} bind:this={panelEl}>
 			{#if selected}
 				<button class="close" type="button" onclick={() => (selected = null)}>
 					{$t('map.close')}
@@ -274,6 +349,7 @@
 		cursor: grab;
 		touch-action: none;
 		min-height: 520px;
+		height: 100%;
 		box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.45);
 		container-type: size;
 	}
@@ -309,6 +385,7 @@
 	.canvas {
 		position: relative;
 		width: min(100cqw, calc(100cqh * 10 / 7));
+		max-width: 100%;
 	}
 
 	.basemap {
@@ -318,6 +395,7 @@
 		aspect-ratio: 10 / 7;
 		user-select: none;
 		pointer-events: none;
+		-webkit-user-drag: none;
 	}
 
 	.scale-badge {
@@ -338,26 +416,27 @@
 	.marker {
 		position: absolute;
 		transform: translate(-50%, -50%);
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 0.25rem;
+		display: grid;
+		place-items: center;
+		width: 44px;
+		height: 44px;
 		z-index: 2;
 		background: none;
 		border: none;
 		padding: 0;
 		cursor: pointer;
+		touch-action: manipulation;
 	}
 
 	.pulse {
 		position: absolute;
-		top: 0;
 		width: 12px;
 		height: 12px;
 		border-radius: 50%;
 		background: var(--marker, var(--gold));
 		opacity: 0.45;
 		animation: pulse 2.4s var(--ease) infinite;
+		pointer-events: none;
 	}
 
 	.dot {
@@ -372,6 +451,7 @@
 		transition:
 			transform 0.25s var(--ease),
 			box-shadow 0.25s var(--ease);
+		pointer-events: none;
 	}
 
 	.marker:hover .dot,
@@ -388,6 +468,9 @@
 	}
 
 	.label {
+		position: absolute;
+		top: calc(100% - 0.15rem);
+		left: 50%;
 		font-family: var(--font-display);
 		font-size: 0.65rem;
 		letter-spacing: 0.06em;
@@ -398,7 +481,7 @@
 		border: 1px solid color-mix(in srgb, var(--marker, var(--gold)) 40%, var(--border));
 		white-space: nowrap;
 		opacity: 0;
-		transform: translateY(4px);
+		transform: translate(-50%, 4px);
 		transition:
 			opacity 0.25s var(--ease),
 			transform 0.25s var(--ease);
@@ -408,7 +491,7 @@
 	.marker:hover .label,
 	.marker.active .label {
 		opacity: 1;
-		transform: translateY(0);
+		transform: translate(-50%, 0);
 	}
 
 	.panel {
@@ -434,6 +517,8 @@
 		background: none;
 		border: none;
 		cursor: pointer;
+		min-height: 44px;
+		padding-inline: 0.5rem;
 	}
 
 	.close:hover {
@@ -611,6 +696,46 @@
 	@media (max-width: 900px) {
 		.stage-wrap {
 			grid-template-columns: 1fr;
+			min-height: 0;
+		}
+
+		.stage {
+			width: 100%;
+			height: auto;
+			min-height: 0;
+			aspect-ratio: 10 / 7;
+			max-height: min(62vh, 480px);
+		}
+
+		.canvas {
+			width: 100%;
+		}
+
+		.filters button,
+		.zoom-controls button {
+			padding: 0.7rem 0.95rem;
+			min-height: 44px;
+		}
+
+		.panel.has-selection {
+			outline: 1px solid color-mix(in srgb, var(--gold) 35%, transparent);
+		}
+	}
+
+	@media (pointer: coarse) {
+		.marker.active .label {
+			opacity: 1;
+			transform: translate(-50%, 0);
+		}
+
+		.dot {
+			width: 14px;
+			height: 14px;
+		}
+
+		.pulse {
+			width: 14px;
+			height: 14px;
 		}
 	}
 
