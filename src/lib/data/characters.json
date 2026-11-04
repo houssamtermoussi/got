@@ -178,5 +178,125 @@
 			"fr": "Fils rejeté de Randyll Tarly, Sam trouve sa place à la Garde de Nuit. Courage et savoir en font un allié inattendu.",
 			"en": "Rejected son of Randyll Tarly, Sam finds his place in the Night's Watch. Courage and knowledge make him an unexpected ally."
 		}
+	},
+	{
+		"id": "robb",
+		"name": { "fr": "Robb Stark", "en": "Robb Stark" },
+		"houseId": "stark",
+		"titles": {
+			"fr": ["Roi du Nord", "Le Jeune Loup"],
+			"en": ["King in the North", "The Young Wolf"]
+		},
+		"image": "/images/characters/robb.jpg",
+		"accent": "#9aa4b2",
+		"bio": {
+			"fr": "Aîné des Stark, Robb mène le Nord en rébellion après la mort de Ned. Victorieux au combat, il est trahi aux Noces Pourpres.",
+			"en": "Eldest Stark son, Robb leads the North in rebellion after Ned's death. Victorious in battle, he is betrayed at the Red Wedding."
+		}
+	},
+	{
+		"id": "catelyn",
+		"name": { "fr": "Catelyn Stark", "en": "Catelyn Stark" },
+		"houseId": "stark",
+		"titles": {
+			"fr": ["Dame de Winterfell", "Mère de Loups"],
+			"en": ["Lady of Winterfell", "Mother of Wolves"]
+		},
+		"image": "/images/characters/catelyn.jpg",
+		"accent": "#9aa4b2",
+		"bio": {
+			"fr": "Née Tully, Catelyn est l'épouse d'Eddard et mère des enfants Stark. Protectrice farouche, elle paie le prix de la guerre des Cinq Rois.",
+			"en": "Born a Tully, Catelyn is Eddard's wife and mother of the Stark children. A fierce protector, she pays the price of the War of the Five Kings."
+		}
+	},
+	{
+		"id": "robert",
+		"name": { "fr": "Robert Baratheon", "en": "Robert Baratheon" },
+		"houseId": "baratheon",
+		"titles": {
+			"fr": ["Roi des Sept Royaumes", "Usurpateur"],
+			"en": ["King of the Seven Kingdoms", "The Usurper"]
+		},
+		"image": "/images/characters/robert.jpg",
+		"accent": "#d4a017",
+		"bio": {
+			"fr": "Héros de la rébellion, Robert gagne le Trône de Fer puis s'y consume. Guerrier jadis légendaire, il laisse un royaume au bord du chaos.",
+			"en": "Hero of the rebellion, Robert wins the Iron Throne then wastes away upon it. Once a legendary warrior, he leaves a realm on the brink of chaos."
+		}
+	},
+	{
+		"id": "margaery",
+		"name": { "fr": "Margaery Tyrell", "en": "Margaery Tyrell" },
+		"houseId": "tyrell",
+		"titles": {
+			"fr": ["Reine des Sept Royaumes", "Rose de Hautjardin"],
+			"en": ["Queen of the Seven Kingdoms", "Rose of Highgarden"]
+		},
+		"image": "/images/characters/margaery.jpg",
+		"accent": "#2f7d4a",
+		"bio": {
+			"fr": "Petite-fille de Olenna, Margaery joue le jeu de la cour avec grâce. Elle épouse trois rois et menace l'emprise de Cersei sur le pouvoir.",
+			"en": "Granddaughter of Olenna, Margaery plays the courtly game with grace. She weds three kings and threatens Cersei's grip on power."
+		}
+	},
+	{
+		"id": "oberyn",
+		"name": { "fr": "Oberyn Martell", "en": "Oberyn Martell" },
+		"houseId": "martell",
+		"titles": {
+			"fr": ["Prince de Dorne", "La Vipère Rouge"],
+			"en": ["Prince of Dorne", "The Red Viper"]
+		},
+		"image": "/images/characters/oberyn.jpg",
+		"accent": "#c45c26",
+		"bio": {
+			"fr": "Frère cadet de Doran, Oberyn revient à King's Landing pour venger Elia. Charismatique et mortel, il affronte la Montagne en combat singulier.",
+			"en": "Younger brother of Doran, Oberyn returns to King's Landing to avenge Elia. Charismatic and deadly, he faces the Mountain in single combat."
+		}
+	},
+	{
+		"id": "yara",
+		"name": { "fr": "Yara Greyjoy", "en": "Yara Greyjoy" },
+		"houseId": "greyjoy",
+		"titles": {
+			"fr": ["Capitaine du Black Wind", "Reine des Îles de Fer"],
+			"en": ["Captain of the Black Wind", "Queen of the Iron Islands"]
+		},
+		"image": "/images/characters/yara.jpg",
+		"accent": "#4a5568",
+		"bio": {
+			"fr": "Fille de Balon et sœur de Theon, Yara commande les mers fer-nées. Hardie et loyale, elle défie les traditions pour gouverner les Îles.",
+			"en": "Daughter of Balon and sister of Theon, Yara commands the ironborn seas. Bold and loyal, she defies tradition to rule the Islands."
+		}
+	},
+	{
+		"id": "viserys",
+		"name": { "fr": "Viserys Targaryen", "en": "Viserys Targaryen" },
+		"houseId": "targaryen",
+		"titles": {
+			"fr": ["Le Mendiant Roi", "Héritier de Valyria"],
+			"en": ["The Beggar King", "Heir of Valyria"]
+		},
+		"image": "/images/characters/viserys.jpg",
+		"accent": "#8b1e1e",
+		"bio": {
+			"fr": "Frère aîné de Daenerys, Viserys rêve de reconquérir Westeros. Obsédé par la couronne, il trouve une fin digne de sa cruauté à Vaes Dothrak.",
+			"en": "Elder brother of Daenerys, Viserys dreams of reclaiming Westeros. Obsessed with the crown, he meets an end fitting his cruelty at Vaes Dothrak."
+		}
+	},
+	{
+		"id": "lysa",
+		"name": { "fr": "Lysa Arryn", "en": "Lysa Arryn" },
+		"houseId": "arryn",
+		"titles": {
+			"fr": ["Dame des Eyrié", "Régente du Val"],
+			"en": ["Lady of the Eyrie", "Regent of the Vale"]
+		},
+		"image": "/images/characters/lysa.jpg",
+		"accent": "#5b7fa6",
+		"bio": {
+			"fr": "Sœur de Catelyn et veuve de Jon Arryn, Lysa règne sur le Val depuis les Eyrié. Possessive et instable, elle devient l'outil de Littlefinger.",
+			"en": "Sister of Catelyn and widow of Jon Arryn, Lysa rules the Vale from the Eyrie. Possessive and unstable, she becomes Littlefinger's pawn."
+		}
 	}
 ]
