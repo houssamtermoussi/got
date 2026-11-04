@@ -31,9 +31,12 @@ export type Location = {
 	name: LocaleText;
 	continent: 'westeros' | 'essos';
 	region: LocaleText;
+	type: LocaleText;
+	houseId: string | null;
 	x: number;
 	y: number;
 	description: LocaleText;
+	notable: LocaleList;
 };
 
 export const houses = housesData as House[];

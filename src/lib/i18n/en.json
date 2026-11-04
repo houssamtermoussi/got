@@ -42,8 +42,15 @@
 		"filterAll": "All",
 		"filterWesteros": "Westeros",
 		"filterEssos": "Essos",
-		"selectHint": "Select a place on the map",
+		"selectHint": "Select a place on the map to view its details.",
 		"continent": "Continent",
+		"region": "Region",
+		"type": "Type",
+		"rulingHouse": "House",
+		"notable": "Notable",
+		"zoomIn": "Zoom in",
+		"zoomOut": "Zoom out",
+		"reset": "Reset view",
 		"close": "Close"
 	},
 	"footer": {
