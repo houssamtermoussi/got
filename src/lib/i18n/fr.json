@@ -4,6 +4,7 @@
 		"home": "Accueil",
 		"characters": "Personnages",
 		"houses": "Maisons",
+		"episodes": "Épisodes",
 		"map": "Carte",
 		"wheel": "Hasard"
 	},
@@ -36,6 +37,21 @@
 		"region": "Région",
 		"members": "Membres connus",
 		"back": "Retour aux maisons"
+	},
+	"episodes": {
+		"title": "Épisodes",
+		"lead": "Les 73 épisodes de la série, saison par saison, avec leur note IMDb.",
+		"season": "Saison",
+		"seasons": "Saisons",
+		"year": "Diffusion",
+		"count": "Épisodes",
+		"average": "Note moyenne",
+		"best": "Meilleure note",
+		"topRated": "Mieux noté de la saison",
+		"minutes": "{n} min",
+		"votes": "{n} votes",
+		"imdbLink": "Voir sur IMDb",
+		"source": "Notes, votes et durées : IMDb, relevés le {date}. Titres français : Wikipédia."
 	},
 	"map": {
 		"title": "Carte des royaumes",
