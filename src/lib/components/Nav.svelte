@@ -30,7 +30,15 @@
 <header class="nav">
 	<div class="inner container">
 		<a class="brand" href={resolve('/')} aria-label={$t('brand')}>
-			<span class="crest" aria-hidden="true">⚔</span>
+			<svg class="crest" viewBox="0 0 24 24" aria-hidden="true">
+				<path
+					d="M8.1 14.8l.4-6.3L5 4.2l4.4 3.4-.8-5.8L11 7.2l1-6.9 1 6.9 2.4-5.4-.8 5.8L19 4.2l-3.5 4.3.4 6.3z"
+				/>
+				<path d="M4.4 10.4l2.9.9v7.9H4.4z" />
+				<path d="M19.6 10.4l-2.9.9v7.9h2.9z" />
+				<path d="M8.1 15.7h7.8v3.5H8.1z" />
+				<path d="M3.6 20.1h16.8l.9 2.9H2.7z" />
+			</svg>
 			<span class="name">{$t('brand')}</span>
 		</a>
 
@@ -90,7 +98,10 @@
 	}
 
 	.crest {
-		font-size: 1.1rem;
+		width: 1.4rem;
+		height: 1.4rem;
+		flex-shrink: 0;
+		fill: currentColor;
 		opacity: 0.85;
 	}
 
