@@ -4,6 +4,7 @@
 		"home": "Home",
 		"characters": "Characters",
 		"houses": "Houses",
+		"episodes": "Episodes",
 		"map": "Map",
 		"wheel": "Fate"
 	},
@@ -36,6 +37,21 @@
 		"region": "Region",
 		"members": "Known members",
 		"back": "Back to houses"
+	},
+	"episodes": {
+		"title": "Episodes",
+		"lead": "All 73 episodes of the series, season by season, with their IMDb rating.",
+		"season": "Season",
+		"seasons": "Seasons",
+		"year": "Aired",
+		"count": "Episodes",
+		"average": "Average rating",
+		"best": "Top rating",
+		"topRated": "Top rated of the season",
+		"minutes": "{n} min",
+		"votes": "{n} votes",
+		"imdbLink": "View on IMDb",
+		"source": "Ratings, votes and runtimes: IMDb, collected on {date}. French titles: Wikipedia."
 	},
 	"map": {
 		"title": "Map of the realms",
