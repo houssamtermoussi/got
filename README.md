@@ -56,6 +56,7 @@ URL : [https://houssamtermoussi.github.io/got/](https://houssamtermoussi.github.
 | `/personnages/[id]` | Fiche personnage |
 | `/maisons` | Liste des maisons |
 | `/maisons/[id]` | Fiche maison + membres |
+| `/episodes` | Épisodes par saison avec leur note IMDb |
 | `/carte` | Carte interactive Westeros / Essos |
 
 ## Langue

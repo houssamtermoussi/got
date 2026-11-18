@@ -1,0 +1,732 @@
+[
+	{
+		"season": 1,
+		"number": 1,
+		"title": { "fr": "L'hiver vient", "en": "Winter Is Coming" },
+		"airDate": "2011-04-17",
+		"runtime": 62,
+		"rating": 8.9,
+		"votes": 83391,
+		"imdbId": "tt1480055"
+	},
+	{
+		"season": 1,
+		"number": 2,
+		"title": { "fr": "La Route royale", "en": "The Kingsroad" },
+		"airDate": "2011-04-24",
+		"runtime": 55,
+		"rating": 8.6,
+		"votes": 63278,
+		"imdbId": "tt1668746"
+	},
+	{
+		"season": 1,
+		"number": 3,
+		"title": { "fr": "Lord Snow", "en": "Lord Snow" },
+		"airDate": "2011-05-01",
+		"runtime": 57,
+		"rating": 8.5,
+		"votes": 59993,
+		"imdbId": "tt1829962"
+	},
+	{
+		"season": 1,
+		"number": 4,
+		"title": { "fr": "Infirmes, Bâtards et Choses brisées", "en": "Cripples, Bastards, and Broken Things" },
+		"airDate": "2011-05-08",
+		"runtime": 56,
+		"rating": 8.6,
+		"votes": 57255,
+		"imdbId": "tt1829963"
+	},
+	{
+		"season": 1,
+		"number": 5,
+		"title": { "fr": "Le Loup et le Lion", "en": "The Wolf and the Lion" },
+		"airDate": "2011-05-15",
+		"runtime": 54,
+		"rating": 9.0,
+		"votes": 60225,
+		"imdbId": "tt1829964"
+	},
+	{
+		"season": 1,
+		"number": 6,
+		"title": { "fr": "Une couronne dorée", "en": "A Golden Crown" },
+		"airDate": "2011-05-22",
+		"runtime": 53,
+		"rating": 9.1,
+		"votes": 59171,
+		"imdbId": "tt1837862"
+	},
+	{
+		"season": 1,
+		"number": 7,
+		"title": { "fr": "Gagner ou mourir", "en": "You Win or You Die" },
+		"airDate": "2011-05-29",
+		"runtime": 58,
+		"rating": 9.2,
+		"votes": 59975,
+		"imdbId": "tt1837863"
+	},
+	{
+		"season": 1,
+		"number": 8,
+		"title": { "fr": "Frapper d'estoc", "en": "The Pointy End" },
+		"airDate": "2011-06-05",
+		"runtime": 59,
+		"rating": 8.9,
+		"votes": 56033,
+		"imdbId": "tt1837864"
+	},
+	{
+		"season": 1,
+		"number": 9,
+		"title": { "fr": "Baelor", "en": "Baelor" },
+		"airDate": "2011-06-12",
+		"runtime": 57,
+		"rating": 9.6,
+		"votes": 81959,
+		"imdbId": "tt1851398"
+	},
+	{
+		"season": 1,
+		"number": 10,
+		"title": { "fr": "De feu et de sang", "en": "Fire and Blood" },
+		"airDate": "2011-06-19",
+		"runtime": 53,
+		"rating": 9.4,
+		"votes": 68939,
+		"imdbId": "tt1851397"
+	},
+	{
+		"season": 2,
+		"number": 1,
+		"title": { "fr": "Le Nord se souvient", "en": "The North Remembers" },
+		"airDate": "2012-04-01",
+		"runtime": 53,
+		"rating": 8.6,
+		"votes": 51655,
+		"imdbId": "tt1971833"
+	},
+	{
+		"season": 2,
+		"number": 2,
+		"title": { "fr": "Les Contrées nocturnes", "en": "The Night Lands" },
+		"airDate": "2012-04-08",
+		"runtime": 54,
+		"rating": 8.3,
+		"votes": 49146,
+		"imdbId": "tt2069318"
+	},
+	{
+		"season": 2,
+		"number": 3,
+		"title": { "fr": "Ce qui est mort ne saurait mourir", "en": "What Is Dead May Never Die" },
+		"airDate": "2012-04-15",
+		"runtime": 53,
+		"rating": 8.6,
+		"votes": 48541,
+		"imdbId": "tt2070135"
+	},
+	{
+		"season": 2,
+		"number": 4,
+		"title": { "fr": "Le Jardin des os", "en": "Garden of Bones" },
+		"airDate": "2012-04-22",
+		"runtime": 51,
+		"rating": 8.6,
+		"votes": 47483,
+		"imdbId": "tt2069319"
+	},
+	{
+		"season": 2,
+		"number": 5,
+		"title": { "fr": "Le Fantôme d'Harrenhal", "en": "The Ghost of Harrenhal" },
+		"airDate": "2012-04-29",
+		"runtime": 55,
+		"rating": 8.6,
+		"votes": 47674,
+		"imdbId": "tt2074658"
+	},
+	{
+		"season": 2,
+		"number": 6,
+		"title": { "fr": "Les Anciens et les Nouveaux Dieux", "en": "The Old Gods and the New" },
+		"airDate": "2012-05-06",
+		"runtime": 54,
+		"rating": 8.9,
+		"votes": 49619,
+		"imdbId": "tt2085238"
+	},
+	{
+		"season": 2,
+		"number": 7,
+		"title": { "fr": "Un homme sans honneur", "en": "A Man Without Honor" },
+		"airDate": "2012-05-13",
+		"runtime": 56,
+		"rating": 8.8,
+		"votes": 48053,
+		"imdbId": "tt2085239"
+	},
+	{
+		"season": 2,
+		"number": 8,
+		"title": { "fr": "Le Prince de Winterfell", "en": "The Prince of Winterfell" },
+		"airDate": "2012-05-20",
+		"runtime": 54,
+		"rating": 8.6,
+		"votes": 47258,
+		"imdbId": "tt2085240"
+	},
+	{
+		"season": 2,
+		"number": 9,
+		"title": { "fr": "La Néra", "en": "Blackwater" },
+		"airDate": "2012-05-27",
+		"runtime": 55,
+		"rating": 9.7,
+		"votes": 89219,
+		"imdbId": "tt2084342"
+	},
+	{
+		"season": 2,
+		"number": 10,
+		"title": { "fr": "Valar Morghulis", "en": "Valar Morghulis" },
+		"airDate": "2012-06-03",
+		"runtime": 64,
+		"rating": 9.3,
+		"votes": 58058,
+		"imdbId": "tt2112510"
+	},
+	{
+		"season": 3,
+		"number": 1,
+		"title": { "fr": "Valar Dohaeris", "en": "Valar Dohaeris" },
+		"airDate": "2013-03-31",
+		"runtime": 55,
+		"rating": 8.6,
+		"votes": 49543,
+		"imdbId": "tt2178782"
+	},
+	{
+		"season": 3,
+		"number": 2,
+		"title": { "fr": "Noires ailes, noires nouvelles", "en": "Dark Wings, Dark Words" },
+		"airDate": "2013-04-07",
+		"runtime": 56,
+		"rating": 8.4,
+		"votes": 46358,
+		"imdbId": "tt2178772"
+	},
+	{
+		"season": 3,
+		"number": 3,
+		"title": { "fr": "Les Immaculés", "en": "Walk of Punishment" },
+		"airDate": "2013-04-14",
+		"runtime": 56,
+		"rating": 8.7,
+		"votes": 46947,
+		"imdbId": "tt2178802"
+	},
+	{
+		"season": 3,
+		"number": 4,
+		"title": { "fr": "Voici que son tour de garde est fini", "en": "And Now His Watch Is Ended" },
+		"airDate": "2013-04-21",
+		"runtime": 53,
+		"rating": 9.5,
+		"votes": 64719,
+		"imdbId": "tt2178798"
+	},
+	{
+		"season": 3,
+		"number": 5,
+		"title": { "fr": "Le Baiser du feu", "en": "Kissed by Fire" },
+		"airDate": "2013-04-28",
+		"runtime": 57,
+		"rating": 8.9,
+		"votes": 49276,
+		"imdbId": "tt2178788"
+	},
+	{
+		"season": 3,
+		"number": 6,
+		"title": { "fr": "L'Ascension", "en": "The Climb" },
+		"airDate": "2013-05-05",
+		"runtime": 53,
+		"rating": 8.7,
+		"votes": 47744,
+		"imdbId": "tt2178812"
+	},
+	{
+		"season": 3,
+		"number": 7,
+		"title": { "fr": "L'Ours et la Belle", "en": "The Bear and the Maiden Fair" },
+		"airDate": "2013-05-12",
+		"runtime": 58,
+		"rating": 8.6,
+		"votes": 46249,
+		"imdbId": "tt2178814"
+	},
+	{
+		"season": 3,
+		"number": 8,
+		"title": { "fr": "Les Puînés", "en": "Second Sons" },
+		"airDate": "2013-05-19",
+		"runtime": 56,
+		"rating": 8.9,
+		"votes": 47596,
+		"imdbId": "tt2178806"
+	},
+	{
+		"season": 3,
+		"number": 9,
+		"title": { "fr": "Les Pluies de Castamere", "en": "The Rains of Castamere" },
+		"airDate": "2013-06-02",
+		"runtime": 51,
+		"rating": 9.9,
+		"votes": 189519,
+		"imdbId": "tt2178784"
+	},
+	{
+		"season": 3,
+		"number": 10,
+		"title": { "fr": "Mhysa", "en": "Mhysa" },
+		"airDate": "2013-06-09",
+		"runtime": 63,
+		"rating": 9.1,
+		"votes": 54148,
+		"imdbId": "tt2178796"
+	},
+	{
+		"season": 4,
+		"number": 1,
+		"title": { "fr": "Deux Épées", "en": "Two Swords" },
+		"airDate": "2014-04-06",
+		"runtime": 58,
+		"rating": 9.0,
+		"votes": 56582,
+		"imdbId": "tt2816136"
+	},
+	{
+		"season": 4,
+		"number": 2,
+		"title": { "fr": "Le Lion et la Rose", "en": "The Lion and the Rose" },
+		"airDate": "2014-04-13",
+		"runtime": 52,
+		"rating": 9.7,
+		"votes": 92197,
+		"imdbId": "tt2832378"
+	},
+	{
+		"season": 4,
+		"number": 3,
+		"title": { "fr": "Briseuse de chaînes", "en": "Breaker of Chains" },
+		"airDate": "2014-04-20",
+		"runtime": 57,
+		"rating": 8.8,
+		"votes": 49944,
+		"imdbId": "tt2972426"
+	},
+	{
+		"season": 4,
+		"number": 4,
+		"title": { "fr": "Féale", "en": "Oathkeeper" },
+		"airDate": "2014-04-27",
+		"runtime": 55,
+		"rating": 8.7,
+		"votes": 48185,
+		"imdbId": "tt2972428"
+	},
+	{
+		"season": 4,
+		"number": 5,
+		"title": { "fr": "Premier du nom", "en": "First of His Name" },
+		"airDate": "2014-05-04",
+		"runtime": 53,
+		"rating": 8.6,
+		"votes": 47535,
+		"imdbId": "tt3060856"
+	},
+	{
+		"season": 4,
+		"number": 6,
+		"title": { "fr": "Les Lois des Dieux et des hommes", "en": "The Laws of Gods and Men" },
+		"airDate": "2014-05-11",
+		"runtime": 51,
+		"rating": 9.7,
+		"votes": 95402,
+		"imdbId": "tt3060910"
+	},
+	{
+		"season": 4,
+		"number": 7,
+		"title": { "fr": "L'Oiseau moqueur", "en": "Mockingbird" },
+		"airDate": "2014-05-18",
+		"runtime": 51,
+		"rating": 9.1,
+		"votes": 52411,
+		"imdbId": "tt3060876"
+	},
+	{
+		"season": 4,
+		"number": 8,
+		"title": { "fr": "La Montagne et la Vipère", "en": "The Mountain and the Viper" },
+		"airDate": "2014-06-01",
+		"runtime": 52,
+		"rating": 9.7,
+		"votes": 92513,
+		"imdbId": "tt3060782"
+	},
+	{
+		"season": 4,
+		"number": 9,
+		"title": { "fr": "Les Veilleurs au rempart", "en": "The Watchers on the Wall" },
+		"airDate": "2014-06-08",
+		"runtime": 51,
+		"rating": 9.6,
+		"votes": 85101,
+		"imdbId": "tt3060858"
+	},
+	{
+		"season": 4,
+		"number": 10,
+		"title": { "fr": "Les Enfants", "en": "The Children" },
+		"airDate": "2014-06-15",
+		"runtime": 65,
+		"rating": 9.7,
+		"votes": 83827,
+		"imdbId": "tt3060860"
+	},
+	{
+		"season": 5,
+		"number": 1,
+		"title": { "fr": "Les Guerres à venir", "en": "The Wars to Come" },
+		"airDate": "2015-04-12",
+		"runtime": 53,
+		"rating": 8.3,
+		"votes": 48747,
+		"imdbId": "tt3658012"
+	},
+	{
+		"season": 5,
+		"number": 2,
+		"title": { "fr": "La Demeure du Noir et du Blanc", "en": "The House of Black and White" },
+		"airDate": "2015-04-19",
+		"runtime": 56,
+		"rating": 8.3,
+		"votes": 45344,
+		"imdbId": "tt3846626"
+	},
+	{
+		"season": 5,
+		"number": 3,
+		"title": { "fr": "Le Grand Moineau", "en": "High Sparrow" },
+		"airDate": "2015-04-26",
+		"runtime": 60,
+		"rating": 8.3,
+		"votes": 44252,
+		"imdbId": "tt3866836"
+	},
+	{
+		"season": 5,
+		"number": 4,
+		"title": { "fr": "Les Fils de la Harpie", "en": "Sons of the Harpy" },
+		"airDate": "2015-05-03",
+		"runtime": 51,
+		"rating": 8.5,
+		"votes": 45209,
+		"imdbId": "tt3866838"
+	},
+	{
+		"season": 5,
+		"number": 5,
+		"title": { "fr": "Tue l'enfant", "en": "Kill the Boy" },
+		"airDate": "2015-05-10",
+		"runtime": 57,
+		"rating": 8.5,
+		"votes": 45395,
+		"imdbId": "tt3866840"
+	},
+	{
+		"season": 5,
+		"number": 6,
+		"title": { "fr": "Insoumis, Invaincus, Intacts", "en": "Unbowed, Unbent, Unbroken" },
+		"airDate": "2015-05-17",
+		"runtime": 54,
+		"rating": 7.9,
+		"votes": 52895,
+		"imdbId": "tt3866842"
+	},
+	{
+		"season": 5,
+		"number": 7,
+		"title": { "fr": "Le Cadeau", "en": "The Gift" },
+		"airDate": "2015-05-24",
+		"runtime": 59,
+		"rating": 8.8,
+		"votes": 47888,
+		"imdbId": "tt3866846"
+	},
+	{
+		"season": 5,
+		"number": 8,
+		"title": { "fr": "Durlieu", "en": "Hardhome" },
+		"airDate": "2015-05-31",
+		"runtime": 61,
+		"rating": 9.8,
+		"votes": 147221,
+		"imdbId": "tt3866850"
+	},
+	{
+		"season": 5,
+		"number": 9,
+		"title": { "fr": "La Danse des dragons", "en": "The Dance of Dragons" },
+		"airDate": "2015-06-07",
+		"runtime": 52,
+		"rating": 9.4,
+		"votes": 68618,
+		"imdbId": "tt3866826"
+	},
+	{
+		"season": 5,
+		"number": 10,
+		"title": { "fr": "La Miséricorde de la mère", "en": "Mother's Mercy" },
+		"airDate": "2015-06-14",
+		"runtime": 60,
+		"rating": 9.2,
+		"votes": 67488,
+		"imdbId": "tt3866862"
+	},
+	{
+		"season": 6,
+		"number": 1,
+		"title": { "fr": "La Femme rouge", "en": "The Red Woman" },
+		"airDate": "2016-04-24",
+		"runtime": 50,
+		"rating": 8.4,
+		"votes": 59297,
+		"imdbId": "tt3658014"
+	},
+	{
+		"season": 6,
+		"number": 2,
+		"title": { "fr": "La Maison", "en": "Home" },
+		"airDate": "2016-05-01",
+		"runtime": 54,
+		"rating": 9.2,
+		"votes": 68414,
+		"imdbId": "tt4077554"
+	},
+	{
+		"season": 6,
+		"number": 3,
+		"title": { "fr": "Le Briseur de serments", "en": "Oathbreaker" },
+		"airDate": "2016-05-08",
+		"runtime": 52,
+		"rating": 8.6,
+		"votes": 53728,
+		"imdbId": "tt4131606"
+	},
+	{
+		"season": 6,
+		"number": 4,
+		"title": { "fr": "Le Livre de l'Étranger", "en": "Book of the Stranger" },
+		"airDate": "2016-05-15",
+		"runtime": 59,
+		"rating": 9.0,
+		"votes": 58697,
+		"imdbId": "tt4283016"
+	},
+	{
+		"season": 6,
+		"number": 5,
+		"title": { "fr": "La Porte", "en": "The Door" },
+		"airDate": "2016-05-22",
+		"runtime": 57,
+		"rating": 9.7,
+		"votes": 112462,
+		"imdbId": "tt4283028"
+	},
+	{
+		"season": 6,
+		"number": 6,
+		"title": { "fr": "De mon sang", "en": "Blood of My Blood" },
+		"airDate": "2016-05-29",
+		"runtime": 52,
+		"rating": 8.3,
+		"votes": 52686,
+		"imdbId": "tt4283054"
+	},
+	{
+		"season": 6,
+		"number": 7,
+		"title": { "fr": "L'Homme brisé", "en": "The Broken Man" },
+		"airDate": "2016-06-05",
+		"runtime": 51,
+		"rating": 8.5,
+		"votes": 51913,
+		"imdbId": "tt4283060"
+	},
+	{
+		"season": 6,
+		"number": 8,
+		"title": { "fr": "Personne", "en": "No One" },
+		"airDate": "2016-06-12",
+		"runtime": 59,
+		"rating": 8.3,
+		"votes": 56639,
+		"imdbId": "tt4283074"
+	},
+	{
+		"season": 6,
+		"number": 9,
+		"title": { "fr": "La Bataille des bâtards", "en": "Battle of the Bastards" },
+		"airDate": "2016-06-19",
+		"runtime": 60,
+		"rating": 9.9,
+		"votes": 316828,
+		"imdbId": "tt4283088"
+	},
+	{
+		"season": 6,
+		"number": 10,
+		"title": { "fr": "Les Vents de l'hiver", "en": "The Winds of Winter" },
+		"airDate": "2016-06-26",
+		"runtime": 68,
+		"rating": 9.9,
+		"votes": 234680,
+		"imdbId": "tt4283094"
+	},
+	{
+		"season": 7,
+		"number": 1,
+		"title": { "fr": "Peyredragon", "en": "Dragonstone" },
+		"airDate": "2017-07-16",
+		"runtime": 59,
+		"rating": 8.5,
+		"votes": 70748,
+		"imdbId": "tt5654088"
+	},
+	{
+		"season": 7,
+		"number": 2,
+		"title": { "fr": "Née du Typhon", "en": "Stormborn" },
+		"airDate": "2017-07-23",
+		"runtime": 59,
+		"rating": 8.7,
+		"votes": 63747,
+		"imdbId": "tt5655178"
+	},
+	{
+		"season": 7,
+		"number": 3,
+		"title": { "fr": "La Justice de la reine", "en": "The Queen's Justice" },
+		"airDate": "2017-07-30",
+		"runtime": 63,
+		"rating": 9.1,
+		"votes": 67725,
+		"imdbId": "tt5775840"
+	},
+	{
+		"season": 7,
+		"number": 4,
+		"title": { "fr": "Les Butins de la guerre", "en": "The Spoils of War" },
+		"airDate": "2017-08-06",
+		"runtime": 50,
+		"rating": 9.7,
+		"votes": 128557,
+		"imdbId": "tt5775846"
+	},
+	{
+		"season": 7,
+		"number": 5,
+		"title": { "fr": "Fort-Levant", "en": "Eastwatch" },
+		"airDate": "2017-08-13",
+		"runtime": 59,
+		"rating": 8.6,
+		"votes": 63486,
+		"imdbId": "tt5775854"
+	},
+	{
+		"season": 7,
+		"number": 6,
+		"title": { "fr": "Au-delà du Mur", "en": "Beyond the Wall" },
+		"airDate": "2017-08-20",
+		"runtime": 70,
+		"rating": 9.0,
+		"votes": 90442,
+		"imdbId": "tt5775864"
+	},
+	{
+		"season": 7,
+		"number": 7,
+		"title": { "fr": "Le Dragon et le Loup", "en": "The Dragon and the Wolf" },
+		"airDate": "2017-08-27",
+		"runtime": 80,
+		"rating": 9.4,
+		"votes": 92105,
+		"imdbId": "tt5775874"
+	},
+	{
+		"season": 8,
+		"number": 1,
+		"title": { "fr": "Winterfell", "en": "Winterfell" },
+		"airDate": "2019-04-14",
+		"runtime": 54,
+		"rating": 7.6,
+		"votes": 162645,
+		"imdbId": "tt5924366"
+	},
+	{
+		"season": 8,
+		"number": 2,
+		"title": { "fr": "Un chevalier des Sept Couronnes", "en": "A Knight of the Seven Kingdoms" },
+		"airDate": "2019-04-21",
+		"runtime": 58,
+		"rating": 7.9,
+		"votes": 162672,
+		"imdbId": "tt6027908"
+	},
+	{
+		"season": 8,
+		"number": 3,
+		"title": { "fr": "La Longue Nuit", "en": "The Long Night" },
+		"airDate": "2019-04-28",
+		"runtime": 82,
+		"rating": 7.5,
+		"votes": 259061,
+		"imdbId": "tt6027912"
+	},
+	{
+		"season": 8,
+		"number": 4,
+		"title": { "fr": "Les Derniers des Stark", "en": "The Last of the Starks" },
+		"airDate": "2019-05-05",
+		"runtime": 78,
+		"rating": 5.5,
+		"votes": 197943,
+		"imdbId": "tt6027914"
+	},
+	{
+		"season": 8,
+		"number": 5,
+		"title": { "fr": "Les Cloches", "en": "The Bells" },
+		"airDate": "2019-05-12",
+		"runtime": 78,
+		"rating": 5.9,
+		"votes": 230150,
+		"imdbId": "tt6027916"
+	},
+	{
+		"season": 8,
+		"number": 6,
+		"title": { "fr": "Le Trône de fer", "en": "The Iron Throne" },
+		"airDate": "2019-05-19",
+		"runtime": 80,
+		"rating": 4.0,
+		"votes": 309992,
+		"imdbId": "tt6027920"
+	}
+]
